@@ -9,7 +9,7 @@ const TableBody = props => {
     'text-white': textWhite
   });
   const renderTD = (field, key, array, row) => {
-    if (field === 'clickEvent') {
+    if (field === 'clickEvent' || field === 'rowClassName') {
       return null;
     }
     if (field !== 'colspan') {
