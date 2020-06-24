@@ -1,8 +1,8 @@
 {
-  "name": "louis-mdbreact",
-  "version": "4.27.8",
+  "name": "mdbreact",
+  "version": "4.27.1",
   "author": "MDBootstrap",
-  "repository": "https://github.com/bbatta38/React-Bootstrap-with-Material-Design.git",
+  "repository": "https://github.com/mdbootstrap/React-Bootstrap-with-Material-Design",
   "main": "dist/mdbreact.js",
   "module": "dist/mdbreact.esm.js",
   "license": "SEE LICENSE IN <license.pdf>",

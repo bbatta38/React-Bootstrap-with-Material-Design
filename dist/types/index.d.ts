@@ -1178,7 +1178,6 @@ declare const MDBTableBody: FunctionComponent<{
   color?: string;
   rows?: {
     clickEvent?: () => void;
-    rowClassName?: string;
     colspan?: number;
     [rest: string]: any;
   }[];
