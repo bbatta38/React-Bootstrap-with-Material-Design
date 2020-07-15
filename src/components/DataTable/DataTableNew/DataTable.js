@@ -7,9 +7,7 @@ import DataTableEntries from './DataTableEntries';
 import DataTableSearch from './DataTableSearch';
 import DataTableInfo from './DataTableInfo';
 import DataTablePagination from './DataTablePagination';
-import { MDBSelect, MDBInput } from 'mdbreact';
-
-
+import { MDBSelect, MDBInput } from 'louis-mdbreact';
 
 import './scss/_datatables2.scss';
 import './scss/_datatables-select2.scss';
@@ -185,8 +183,6 @@ class DataTable extends Component {
         rows: withCheckBoxes
       });
     }
-
-    
 
     if (order.length > 0) {
       this.handleSort(order[0], order[1]);
@@ -589,8 +585,6 @@ class DataTable extends Component {
     );
   };
 
-  
-
   render() {
     const {
       autoWidth,
@@ -784,8 +778,6 @@ class DataTable extends Component {
             </div>
           </div>
         </div>
-
-        
       </div>
     );
   }
