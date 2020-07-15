@@ -1,3 +1,9 @@
+#### This is custom version of MDBReact modified to use initialPage, searchText and rowClassName on DataTable v4
+
+- initialPage: to set page number of data table when a page is loaded.
+- searchText: to set searched value of data table when a page is loaded.
+- rowClassName: to set indivisual className for `<tr>` on table.
+
 <p align="center">
   <a href="http://mdbootstrap.com/docs/react/">
     <img width="500" src="https://mdbootstrap.com/img/Marketing/general/logo/huge/mdb-react.png">
