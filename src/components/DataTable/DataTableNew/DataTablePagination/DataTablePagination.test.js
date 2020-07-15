@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr, checkClass } from '../../../tests/utils';
+import { findByTestAttr, checkClass } from '../../../../tests/utils';
 import DataTablePagination from './DataTablePagination';
 
 const expectedProps = {

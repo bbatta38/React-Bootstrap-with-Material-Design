@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { MDBSelect } from 'mdbreact';
 import DataTableTable from './DataTableTable';
 import DataTableTableScroll from './DataTableTableScroll';
 import DataTableEntries from './DataTableEntries';
@@ -9,10 +8,9 @@ import DataTableSearch from './DataTableSearch';
 import DataTableInfo from './DataTableInfo';
 import DataTablePagination from './DataTablePagination';
 
-
 class DataTable extends Component {
   state = {
-    activePage: 0,
+    activePage: this.props.initialPage || 0,
     columns: this.props.data.columns || [],
     entries: this.props.entries,
     filteredRows: this.props.data.rows || [],
@@ -20,7 +18,7 @@ class DataTable extends Component {
     order: this.props.order || [],
     pages: [],
     rows: this.props.data.rows || [],
-    search: '',
+    search: this.props.searchText || '',
     searchSelect: '',
     sorted: false,
     translateScrollHead: 0,
@@ -30,12 +28,10 @@ class DataTable extends Component {
   componentDidMount() {
     const { data, paging } = this.props;
     const { order, columns, pages, rows } = this.state;
-
     if (typeof data === 'string') {
       this.fetchData(data, this.paginateRows);
     }
 
-    
     if (order.length > 0) {
       this.handleSort(order[0], order[1]);
     } else {
@@ -226,7 +222,7 @@ class DataTable extends Component {
                 : prevState.pages.length - 1)
           };
         } else if (!this.props.disableRetreatAfterSorting) {
-          test = { filteredRows, activePage: 0 };
+          test = { filteredRows, activePage: prevState.activePage };
         }
 
         return test;
@@ -272,8 +268,6 @@ class DataTable extends Component {
   handleTableBodyScroll = e => {
     this.setState({ translateScrollHead: e.target.scrollLeft });
   };
-
-  
 
   render() {
     const {
@@ -325,20 +319,12 @@ class DataTable extends Component {
       materialSearch,
       theadTextWhite,
       proSelect,
+      initialPage,
+      searchText,
       ...attributes
     } = this.props;
 
-    const {
-      columns,
-      entries,
-      filteredRows,
-      filterOptions,
-      pages,
-      activePage,
-      search,
-      sorted,
-      translateScrollHead
-    } = this.state;
+    const { columns, entries, filteredRows, pages, activePage, search, sorted, translateScrollHead } = this.state;
 
     const tableClasses = classNames('dataTables_wrapper dt-bootstrap4', className);
 
@@ -476,8 +462,6 @@ class DataTable extends Component {
             />
           </div>
         )}
-
-        
       </div>
     );
   }
@@ -504,6 +488,7 @@ DataTable.propTypes = {
   hover: PropTypes.bool,
   info: PropTypes.bool,
   infoLabel: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string]),
+  initialPage: PropTypes.number,
   materialSearch: PropTypes.bool,
   maxHeight: PropTypes.string,
   noBottomColumns: PropTypes.bool,
@@ -525,6 +510,7 @@ DataTable.propTypes = {
   scrollY: PropTypes.bool,
   searching: PropTypes.bool,
   searchLabel: PropTypes.string,
+  searchText: PropTypes.string,
   small: PropTypes.bool,
   sortable: PropTypes.bool,
   sortRows: PropTypes.arrayOf(PropTypes.string),
@@ -556,6 +542,7 @@ DataTable.defaultProps = {
   hover: false,
   info: true,
   infoLabel: ['Showing', 'to', 'of', 'entries'],
+  initialPage: 0,
   noRecordsFoundLabel: 'No matching records found',
   noBottomColumns: false,
   order: [],
@@ -569,6 +556,7 @@ DataTable.defaultProps = {
   responsiveXl: false,
   searching: true,
   searchLabel: 'Search',
+  searchText: '',
   scrollX: false,
   scrollY: false,
   sortable: true,

@@ -492,6 +492,7 @@ declare const MDBContainer: FunctionComponent<{
 
 declare class MDBDataTable extends Component<
   {
+    initialPage?: number;
     autoWidth?: boolean;
     barReverse?: boolean;
     bordered?: boolean;
@@ -537,6 +538,7 @@ declare class MDBDataTable extends Component<
     responsiveXl?: boolean;
     searching?: boolean;
     searchingLabel?: string;
+    searchText?: string;
     scrollX?: boolean;
     scrollY?: boolean;
     sortable?: boolean;
@@ -549,10 +551,7 @@ declare class MDBDataTable extends Component<
     tag?: string;
     onSearch?: (value: string) => string | void;
     onSort?: (obj: { column: string; direction: string }) => object | void;
-    onPageChange?: (obj: {
-      activePage: number;
-      pagesAmount: number;
-    }) => object | void;
+    onPageChange?: (obj: { activePage: number; pagesAmount: number }) => object | void;
     [rest: string]: any;
   },
   any
@@ -591,6 +590,7 @@ declare class MDBDataTable$1 extends Component<
     hover?: boolean;
     info?: boolean;
     infoLabel?: string[];
+    initialPage?: number;
     noRecordsFoundLabel?: string;
     maxHeight?: string;
     noBottomColumns?: boolean;
@@ -617,10 +617,7 @@ declare class MDBDataTable$1 extends Component<
     tag?: string;
     onSearch?: (value: string) => string | void;
     onSort?: (obj: { column: string; direction: string }) => object | void;
-    onPageChange?: (obj: {
-      activePage: number;
-      pagesAmount: number;
-    }) => object | void;
+    onPageChange?: (obj: { activePage: number; pagesAmount: number }) => object | void;
     [rest: string]: any;
   },
   any
@@ -1178,6 +1175,7 @@ declare const MDBTableBody: FunctionComponent<{
   color?: string;
   rows?: {
     clickEvent?: () => void;
+    rowClassName?: string;
     colspan?: number;
     [rest: string]: any;
   }[];

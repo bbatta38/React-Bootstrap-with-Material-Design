@@ -12,6 +12,9 @@ const TableBody = props => {
     if (field === 'clickEvent') {
       return null;
     }
+    if (field === 'rowClassName') {
+      return null;
+    }
     if (field !== 'colspan') {
       if (row.message) {
         return (

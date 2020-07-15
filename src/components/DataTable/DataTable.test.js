@@ -194,7 +194,6 @@ describe('<DataTable />', () => {
       expect(info).toHaveLength(1);
       expect(pagination).toHaveLength(1);
     });
-
   });
 
   describe('sorts correctly', () => {
@@ -547,8 +546,7 @@ describe('<DataTable />', () => {
       ]
     };
 
-    const mounted = (props = {}) =>
-      mount(<DataTable data={sortRows} sortRows={['link']} {...props} />);
+    const mounted = (props = {}) => mount(<DataTable data={sortRows} sortRows={['link']} {...props} />);
 
     beforeEach(() => {
       wrapper = mounted();
@@ -559,23 +557,13 @@ describe('<DataTable />', () => {
     });
 
     test('`checkFieldValue()`returns `searchvalue` instead of value', () => {
-      expect(
-        wrapper.instance().checkFieldValue(sortRows.rows[0], 'link')
-      ).toEqual('Cedric_');
+      expect(wrapper.instance().checkFieldValue(sortRows.rows[0], 'link')).toEqual('Cedric_');
     });
 
     test('`checkField()` returns correct result of sort depending on `sort direction`', () => {
-      expect(
-        wrapper
-          .instance()
-          .checkField('link', sortRows.rows[0], sortRows.rows[1], 'asc')
-      ).toEqual(1);
+      expect(wrapper.instance().checkField('link', sortRows.rows[0], sortRows.rows[1], 'asc')).toEqual(1);
 
-      expect(
-        wrapper
-          .instance()
-          .checkField('link', sortRows.rows[0], sortRows.rows[1], 'desc')
-      ).toEqual(-1);
+      expect(wrapper.instance().checkField('link', sortRows.rows[0], sortRows.rows[1], 'desc')).toEqual(-1);
     });
 
     test('`sort()` invokes `checkField()` instead of regular comparison', () => {

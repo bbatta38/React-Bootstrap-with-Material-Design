@@ -1,8 +1,8 @@
 {
   "name": "mdbreact",
-  "version": "4.27.1",
+  "version": "4.27.2",
   "author": "MDBootstrap",
-  "repository": "https://github.com/mdbootstrap/React-Bootstrap-with-Material-Design",
+  "repository": "https://github.com/bbatta38/React-Bootstrap-with-Material-Design.git",
   "main": "dist/mdbreact.js",
   "module": "dist/mdbreact.esm.js",
   "license": "SEE LICENSE IN <license.pdf>",
@@ -94,7 +94,7 @@
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
-    "node-sass": "4.13.1",
+    "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
     "rollup": "1.29.0",
     "rollup-plugin-babel": "^4.3.3",
@@ -110,6 +110,6 @@
     "url-loader": "3.0.0",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10",
-    "webpack-dev-server": "3.10.1"
+    "webpack-dev-server": "^3.11.0"
   }
 }

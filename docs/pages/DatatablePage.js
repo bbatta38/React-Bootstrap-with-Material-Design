@@ -545,7 +545,7 @@ const DatatablePage = () => {
 
       <MDBRow className='py-3'>
         <MDBCol md='12'>
-          <SectionContainer title='Basic example' noBorder>
+          <SectionContainer title='Basic example'>
             <MDBCard>
               <MDBCardBody>
                 <MDBDataTable
@@ -558,6 +558,8 @@ const DatatablePage = () => {
                   data={data()}
                   materialSearch={true}
                   proSelect
+                  initialPage={2}
+                  searchText={'Jena Gaines'}
                 />
               </MDBCardBody>
             </MDBCard>
@@ -579,6 +581,7 @@ const DatatablePage = () => {
                   pagesAmount={4}
                   data={data()}
                   materialSearch
+                  initialPage={2}
                 />
               </MDBCardBody>
             </MDBCard>
