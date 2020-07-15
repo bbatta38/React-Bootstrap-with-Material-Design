@@ -1,4 +1,5 @@
 import * as React from 'react';
+// eslint-disable-next-line import/no-unresolved
 import { classNameType, buttonColor } from '../../types';
 
 export interface TypesFree extends classNameType {
@@ -10,10 +11,7 @@ export interface TypesFree extends classNameType {
   disabled?: boolean;
   download?: string;
   href?: string;
-  innerRef?:
-    | React.RefObject<HTMLButtonElement>
-    | ((ref: React.RefObject<HTMLButtonElement>) => void)
-    | null;
+  innerRef?: React.RefObject<HTMLButtonElement> | ((ref: React.RefObject<HTMLButtonElement>) => void) | null;
   role?: string;
   size?: 'sm' | 'lg';
   social?: string;

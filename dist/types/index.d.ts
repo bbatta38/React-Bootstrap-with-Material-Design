@@ -1397,10 +1397,7 @@ interface TypesFree extends classNameType {
   disabled?: boolean;
   download?: string;
   href?: string;
-  innerRef?:
-    | RefObject<HTMLButtonElement>
-    | ((ref: RefObject<HTMLButtonElement>) => void)
-    | null;
+  innerRef?: RefObject<HTMLButtonElement> | ((ref: RefObject<HTMLButtonElement>) => void) | null;
   role?: string;
   size?: 'sm' | 'lg';
   social?: string;
