@@ -37,6 +37,7 @@ class Modal extends Component {
   };
 
   handleOnEntered = (type, node) => {
+    console.log(node);
     if (type === 'backdrop' && this.props.fade === false) {
       return;
     }
@@ -194,11 +195,9 @@ class Modal extends Component {
       id,
       tabIndex,
       role,
-      'aria-hidden': 'true',
-      ...attributes
+      'aria-hidden': 'true'
     });
     const styles = removeBackdropConditions ? removeBackdropClass : {};
-
     const modal = (
       <div
         data-test='modal'

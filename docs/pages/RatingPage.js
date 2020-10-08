@@ -25,10 +25,7 @@ const RatingPage = () => {
 
   return (
     <MDBContainer>
-      <DocsLink
-        title='Rating'
-        href='https://mdbootstrap.com/plugins/react/rating/'
-      />
+      <DocsLink title='Rating' href='https://mdbootstrap.com/plugins/react/rating/' />
 
       <SectionContainer header='Basic Example' flexCenter>
         <MDBRating data={basic} />
@@ -39,12 +36,7 @@ const RatingPage = () => {
       </SectionContainer>
 
       <SectionContainer header='Faces rating' flexCenter>
-        <MDBRating
-          iconFaces
-          fillClassName='black-text'
-          iconSize='2x'
-          iconRegular
-        />
+        <MDBRating iconFaces fillClassName='black-text' iconSize='2x' iconRegular />
       </SectionContainer>
 
       <SectionContainer header='Fill color on hover' flexCenter>
@@ -56,13 +48,7 @@ const RatingPage = () => {
           iconFaces
           iconSize='2x'
           iconRegular
-          fillColors={[
-            'red-text',
-            'orange-text',
-            'yellow-text',
-            'lime-text',
-            'light-green-text'
-          ]}
+          fillColors={['red-text', 'orange-text', 'yellow-text', 'lime-text', 'light-green-text']}
         />
       </SectionContainer>
 

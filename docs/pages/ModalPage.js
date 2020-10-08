@@ -291,11 +291,7 @@ class ModalPage extends Component {
 
         <SectionContainer header='Remove backdrop' flexCenter>
           <MDBBtn onClick={this.toggle(12)}>Modal</MDBBtn>
-          <MDBModal
-            isOpen={modal12}
-            toggle={this.toggle(12)}
-            backdrop={false}
-          >
+          <MDBModal isOpen={modal12} toggle={this.toggle(12)} backdrop={false}>
             <MDBModalHeader toggle={this.toggle(12)}>Modal title</MDBModalHeader>
             <MDBModalBody>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
