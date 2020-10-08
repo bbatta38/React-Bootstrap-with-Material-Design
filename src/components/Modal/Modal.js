@@ -37,7 +37,6 @@ class Modal extends Component {
   };
 
   handleOnEntered = (type, node) => {
-    console.log(node);
     if (type === 'backdrop' && this.props.fade === false) {
       return;
     }
