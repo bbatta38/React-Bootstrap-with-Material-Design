@@ -181,7 +181,7 @@ class HomePage extends React.Component {
                             <strong>ADVANCED</strong>
                           </MDBCardTitle>
                           <MDBCardText>
-                            Advanced components such as charts, carousels,
+                            Advanced components such as carousels,
                             tooltips and popovers. All in Material Design
                             version.
                           </MDBCardText>

@@ -46,7 +46,6 @@ import DropdownPage from './pages/DropdownPage';
 import VideoCarouselPage from './pages/VideoCarouselPage';
 import HoverPage from './pages/HoverPage';
 import FormsPage from './pages/FormsPage';
-import ChartsPage from './pages/ChartsPage';
 import SearchPage from './pages/SearchPage';
 import ValidationPage from './pages/ValidationPage';
 import NavbarPage from './pages/NavbarPage';
@@ -91,7 +90,6 @@ class Routes extends React.Component {
         <Route path='/advanced/alerts' component={AlertPage} />
         <Route path='/advanced/popover' component={PopoverPage} />
         <Route path='/advanced/tooltips' component={TooltipsPage} />
-        <Route path='/advanced/charts' component={ChartsPage} />
         <Route path='/advanced/scrollbar' component={ScrollBarPage} />
         <Route path='/css/animations' component={AnimationPage} />
         <Route path='/css/icons' component={FaPage} />

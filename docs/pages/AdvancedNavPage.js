@@ -29,7 +29,6 @@ const AdvancedNavPage = () => {
                   </h6>
                   <MenuLink to='/advanced/alerts' title='Alerts' />
                   <MenuLink to='/advanced/carousel' title='Carousel' />
-                  <MenuLink to='/advanced/charts' title='Charts' />
                   <MenuLink to='/advanced/collapse' title='Collapse' />
                   <MenuLink to='/advanced/popover' title='Popover' />
                   <MenuLink to='/advanced/scrollbar' title='ScrollBar' />

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { MDBBox } from 'louis-mdbreact';
+import { MDBBox } from 'mdbreact';
 import './Gallery.css';
 
 const Gallery = React.forwardRef(function Gallery(props, ref) {
