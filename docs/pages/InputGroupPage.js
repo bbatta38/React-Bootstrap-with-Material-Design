@@ -11,7 +11,7 @@ import {
   MDBCol,
   MDBInput,
   MDBRow
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
@@ -72,10 +72,7 @@ class InputGroupPage extends React.Component {
   render() {
     return (
       <MDBContainer className='inpGroup mb-5'>
-        <DocsLink
-          header='Inputs Group'
-          href='https://mdbootstrap.com/docs/react/forms/input-group/'
-        />
+        <DocsLink header='Inputs Group' href='https://mdbootstrap.com/docs/react/forms/input-group/' />
         <SectionContainer noBorder>
           <MDBRow>
             <MDBCol md='6'>
@@ -83,27 +80,15 @@ class InputGroupPage extends React.Component {
                 header='Default input groups'
                 description='Default styling for Bootstrap Input Group component'
               >
-                <MDBInputGroup
-                  containerClassName='mb-3'
-                  prepend='@'
-                  hint='Username'
-                />
-                <MDBInputGroup
-                  containerClassName='mb-3'
-                  append='@example.com'
-                  hint="Recipient's username"
-                />
+                <MDBInputGroup containerClassName='mb-3' prepend='@' hint='Username' />
+                <MDBInputGroup containerClassName='mb-3' append='@example.com' hint="Recipient's username" />
                 <MDBInputGroup
                   label='Your vanity URL'
                   containerClassName='mb-3'
                   prepend='https://example.com/users/'
                   id='basic-url'
                 />
-                <MDBInputGroup
-                  containerClassName='mb-3'
-                  prepend='$'
-                  append='.00'
-                />
+                <MDBInputGroup containerClassName='mb-3' prepend='$' append='.00' />
                 <MDBInputGroup prepend='With textarea' type='textarea' />
               </SectionContainer>
             </MDBCol>
@@ -112,12 +97,7 @@ class InputGroupPage extends React.Component {
                 header='Material input groups'
                 description='Material Design styling for Bootstrap Input Group component'
               >
-                <MDBInputGroup
-                  material
-                  containerClassName='mb-3 mt-0'
-                  prepend='@'
-                  hint='Username'
-                />
+                <MDBInputGroup material containerClassName='mb-3 mt-0' prepend='@' hint='Username' />
                 <MDBInputGroup
                   material
                   hint="Recipient's username"
@@ -132,18 +112,8 @@ class InputGroupPage extends React.Component {
                   prepend='https://example.com/users/'
                   id='basic-url-material'
                 />
-                <MDBInputGroup
-                  material
-                  containerClassName='mb-3'
-                  prepend='$'
-                  append='.00'
-                />
-                <MDBInputGroup
-                  material
-                  className='mb-0'
-                  prepend='With textarea'
-                  type='textarea'
-                />
+                <MDBInputGroup material containerClassName='mb-3' prepend='$' append='.00' />
+                <MDBInputGroup material className='mb-0' prepend='With textarea' type='textarea' />
               </SectionContainer>
             </MDBCol>
           </MDBRow>
@@ -153,50 +123,24 @@ class InputGroupPage extends React.Component {
           header='Wrapping'
           description='Input groups wrap by default via flex-wrap: wrap in order to accommodate custom form field validation within an input group. You may disable this with containerClassName="flex-nowrap".'
         >
-          <MDBInputGroup
-            containerClassName='flex-nowrap mb-3'
-            prepend='@'
-            hint='Username'
-          />
+          <MDBInputGroup containerClassName='flex-nowrap mb-3' prepend='@' hint='Username' />
         </SectionContainer>
 
         <SectionContainer header='Sizing' noBottom noBorder>
           <MDBRow>
             <MDBCol md='6'>
               <SectionContainer>
-                <MDBInputGroup
-                  containerClassName='mb-3'
-                  prepend='Small'
-                  size='sm'
-                />
+                <MDBInputGroup containerClassName='mb-3' prepend='Small' size='sm' />
                 <MDBInputGroup containerClassName='mb-3' prepend='Default' />
-                <MDBInputGroup
-                  containerClassName='mb-3'
-                  prepend='Large'
-                  size='lg'
-                />
+                <MDBInputGroup containerClassName='mb-3' prepend='Large' size='lg' />
               </SectionContainer>
             </MDBCol>
 
             <MDBCol md='6'>
               <SectionContainer>
-                <MDBInputGroup
-                  material
-                  containerClassName='mb-2 mt-0'
-                  prepend='Small'
-                  size='sm'
-                />
-                <MDBInputGroup
-                  material
-                  containerClassName='mb-2 mt-0'
-                  prepend='Default'
-                />
-                <MDBInputGroup
-                  material
-                  containerClassName='mb-2 mt-0'
-                  prepend='Large'
-                  size='lg'
-                />
+                <MDBInputGroup material containerClassName='mb-2 mt-0' prepend='Small' size='sm' />
+                <MDBInputGroup material containerClassName='mb-2 mt-0' prepend='Default' />
+                <MDBInputGroup material containerClassName='mb-2 mt-0' prepend='Large' size='lg' />
               </SectionContainer>
             </MDBCol>
           </MDBRow>
@@ -294,12 +238,7 @@ class InputGroupPage extends React.Component {
                 <MDBInputGroup
                   containerClassName='mb-3'
                   prepend={
-                    <MDBBtn
-                      color='primary'
-                      outline
-                      size='md'
-                      className='m-0 px-3 py-2 z-depth-0'
-                    >
+                    <MDBBtn color='primary' outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                       BUTTON
                     </MDBBtn>
                   }
@@ -309,11 +248,7 @@ class InputGroupPage extends React.Component {
                   hint="Recipient's username"
                   containerClassName='mb-3'
                   append={
-                    <MDBBtn
-                      outline
-                      size='md'
-                      className='m-0 px-3 py-2 z-depth-0'
-                    >
+                    <MDBBtn outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                       BUTTON
                     </MDBBtn>
                   }
@@ -323,20 +258,10 @@ class InputGroupPage extends React.Component {
                   containerClassName='mb-3'
                   prepend={
                     <>
-                      <MDBBtn
-                        color='secondary'
-                        outline
-                        size='md'
-                        className='m-0 px-3 py-2 z-depth-0'
-                      >
+                      <MDBBtn color='secondary' outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                         BUTTON
                       </MDBBtn>
-                      <MDBBtn
-                        color='secondary'
-                        outline
-                        size='md'
-                        className='m-0 px-3 py-2 z-depth-0'
-                      >
+                      <MDBBtn color='secondary' outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                         BUTTON
                       </MDBBtn>
                     </>
@@ -348,20 +273,10 @@ class InputGroupPage extends React.Component {
                   containerClassName='mb-3'
                   append={
                     <>
-                      <MDBBtn
-                        color='info'
-                        outline
-                        size='md'
-                        className='m-0 px-3 py-2 z-depth-0'
-                      >
+                      <MDBBtn color='info' outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                         BUTTON
                       </MDBBtn>
-                      <MDBBtn
-                        color='info'
-                        outline
-                        size='md'
-                        className='m-0 px-3 py-2 z-depth-0'
-                      >
+                      <MDBBtn color='info' outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                         BUTTON
                       </MDBBtn>
                     </>
@@ -387,11 +302,7 @@ class InputGroupPage extends React.Component {
                   containerClassName='mb-3 mt-0'
                   hint="Recipient's username"
                   append={
-                    <MDBBtn
-                      color='secondary'
-                      size='md'
-                      className='m-0 px-3 py-2 z-depth-0'
-                    >
+                    <MDBBtn color='secondary' size='md' className='m-0 px-3 py-2 z-depth-0'>
                       BUTTON
                     </MDBBtn>
                   }
@@ -402,18 +313,10 @@ class InputGroupPage extends React.Component {
                   containerClassName='mb-3 mt-0'
                   prepend={
                     <>
-                      <MDBBtn
-                        color='info'
-                        size='md'
-                        className='m-0 px-3 py-2 z-depth-1'
-                      >
+                      <MDBBtn color='info' size='md' className='m-0 px-3 py-2 z-depth-1'>
                         BUTTON
                       </MDBBtn>
-                      <MDBBtn
-                        color='info'
-                        size='md'
-                        className='m-0 px-3 py-2 z-depth-1'
-                      >
+                      <MDBBtn color='info' size='md' className='m-0 px-3 py-2 z-depth-1'>
                         BUTTON
                       </MDBBtn>
                     </>
@@ -426,18 +329,10 @@ class InputGroupPage extends React.Component {
                   containerClassName='mb-4 mt-0'
                   append={
                     <>
-                      <MDBBtn
-                        color='primary'
-                        size='md'
-                        className='m-0 px-3 py-2 z-depth-1'
-                      >
+                      <MDBBtn color='primary' size='md' className='m-0 px-3 py-2 z-depth-1'>
                         BUTTON
                       </MDBBtn>
-                      <MDBBtn
-                        color='primary'
-                        size='md'
-                        className='m-0 px-3 py-2 z-depth-1'
-                      >
+                      <MDBBtn color='primary' size='md' className='m-0 px-3 py-2 z-depth-1'>
                         BUTTON
                       </MDBBtn>
                     </>
@@ -453,11 +348,7 @@ class InputGroupPage extends React.Component {
             containerClassName='mb-3'
             prepend={
               <MDBDropdown>
-                <MDBDropdownToggle
-                  color='primary'
-                  size='md'
-                  className='m-0 px-3 z-depth-0'
-                >
+                <MDBDropdownToggle color='primary' size='md' className='m-0 px-3 z-depth-0'>
                   Dropdown <MDBIcon icon='caret-down' className='ml-1' />
                 </MDBDropdownToggle>
                 <MDBDropdownMenu color='white'>
@@ -475,11 +366,7 @@ class InputGroupPage extends React.Component {
             containerClassName='mb-3'
             append={
               <MDBDropdown>
-                <MDBDropdownToggle
-                  color='default'
-                  size='md'
-                  className='m-0 px-3 z-depth-0'
-                >
+                <MDBDropdownToggle color='default' size='md' className='m-0 px-3 z-depth-0'>
                   Dropdown <MDBIcon icon='caret-down' className='ml-1' />
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
@@ -499,21 +386,11 @@ class InputGroupPage extends React.Component {
             containerClassName='mb-3'
             prepend={
               <>
-                <MDBBtn
-                  outline
-                  color='primary'
-                  size='md'
-                  className='m-0 px-3 py-2 z-depth-0 rounded-0'
-                >
+                <MDBBtn outline color='primary' size='md' className='m-0 px-3 py-2 z-depth-0 rounded-0'>
                   ACTION
                 </MDBBtn>
                 <MDBDropdown>
-                  <MDBDropdownToggle
-                    outline
-                    color='primary'
-                    size='md'
-                    className='m-0 px-2 z-depth-0 rounded-0'
-                  >
+                  <MDBDropdownToggle outline color='primary' size='md' className='m-0 px-2 z-depth-0 rounded-0'>
                     <MDBIcon icon='caret-down' />
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
@@ -532,21 +409,11 @@ class InputGroupPage extends React.Component {
             containerClassName='mb-3'
             append={
               <>
-                <MDBBtn
-                  outline
-                  color='info'
-                  size='md'
-                  className='m-0 px-3 py-2 z-depth-0 rounded-0'
-                >
+                <MDBBtn outline color='info' size='md' className='m-0 px-3 py-2 z-depth-0 rounded-0'>
                   ACTION
                 </MDBBtn>
                 <MDBDropdown>
-                  <MDBDropdownToggle
-                    outline
-                    color='info'
-                    size='md'
-                    className='m-0 px-2 z-depth-0 rounded-0'
-                  >
+                  <MDBDropdownToggle outline color='info' size='md' className='m-0 px-2 z-depth-0 rounded-0'>
                     <MDBIcon icon='caret-down' />
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
@@ -592,12 +459,7 @@ class InputGroupPage extends React.Component {
           <MDBInputGroup
             containerClassName='mb-3'
             prepend={
-              <MDBBtn
-                color='mdb-color'
-                outline
-                size='md'
-                className='m-0 px-3 py-2 z-depth-0'
-              >
+              <MDBBtn color='mdb-color' outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                 BUTTON
               </MDBBtn>
             }
@@ -614,12 +476,7 @@ class InputGroupPage extends React.Component {
           <MDBInputGroup
             containerClassName='mb-3'
             append={
-              <MDBBtn
-                color='mdb-color'
-                outline
-                size='md'
-                className='m-0 px-3 py-2 z-depth-0'
-              >
+              <MDBBtn color='mdb-color' outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                 BUTTON
               </MDBBtn>
             }
@@ -639,11 +496,7 @@ class InputGroupPage extends React.Component {
             prepend='Upload'
             inputs={
               <div className='custom-file'>
-                <input
-                  type='file'
-                  className='custom-file-input'
-                  id='inputGroupFile01'
-                />
+                <input type='file' className='custom-file-input' id='inputGroupFile01' />
                 <label className='custom-file-label' htmlFor='inputGroupFile01'>
                   Choose file
                 </label>
@@ -656,11 +509,7 @@ class InputGroupPage extends React.Component {
             append='Upload'
             inputs={
               <div className='custom-file'>
-                <input
-                  type='file'
-                  className='custom-file-input'
-                  id='inputGroupFile01'
-                />
+                <input type='file' className='custom-file-input' id='inputGroupFile01' />
                 <label className='custom-file-label' htmlFor='inputGroupFile01'>
                   Choose file
                 </label>
@@ -671,22 +520,13 @@ class InputGroupPage extends React.Component {
 
           <MDBInputGroup
             prepend={
-              <MDBBtn
-                color='mdb-color'
-                outline
-                size='md'
-                className='m-0 px-3 py-2 z-depth-0'
-              >
+              <MDBBtn color='mdb-color' outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                 BUTTON
               </MDBBtn>
             }
             inputs={
               <div className='custom-file'>
-                <input
-                  type='file'
-                  className='custom-file-input'
-                  id='inputGroupFile01'
-                />
+                <input type='file' className='custom-file-input' id='inputGroupFile01' />
                 <label className='custom-file-label' htmlFor='inputGroupFile01'>
                   Choose file
                 </label>
@@ -697,22 +537,13 @@ class InputGroupPage extends React.Component {
 
           <MDBInputGroup
             append={
-              <MDBBtn
-                color='mdb-color'
-                outline
-                size='md'
-                className='m-0 px-3 py-2 z-depth-0'
-              >
+              <MDBBtn color='mdb-color' outline size='md' className='m-0 px-3 py-2 z-depth-0'>
                 BUTTON
               </MDBBtn>
             }
             inputs={
               <div className='custom-file'>
-                <input
-                  type='file'
-                  className='custom-file-input'
-                  id='inputGroupFile01'
-                />
+                <input type='file' className='custom-file-input' id='inputGroupFile01' />
                 <label className='custom-file-label' htmlFor='inputGroupFile01'>
                   Choose file
                 </label>

@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import {
-  MDBPopover,
-  MDBBtn,
-  MDBPopoverBody,
-  MDBPopoverHeader,
-  MDBContainer
-} from 'mdbreact';
+import { MDBPopover, MDBBtn, MDBPopoverBody, MDBPopoverHeader, MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
@@ -14,15 +8,9 @@ const PopoverPage = () => {
 
   return (
     <MDBContainer>
-      <DocsLink
-        title='Popovers'
-        href='https://mdbootstrap.com/docs/react/advanced/popovers/'
-      />
+      <DocsLink title='Popovers' href='https://mdbootstrap.com/docs/react/advanced/popovers/' />
 
-      <SectionContainer
-        header='With text'
-        className='d-flex justify-content-center py-5'
-      >
+      <SectionContainer header='With text' className='d-flex justify-content-center py-5'>
         <MDBPopover
           popover
           clickable
@@ -39,8 +27,8 @@ const PopoverPage = () => {
               popover on left
             </MDBPopoverHeader>
             <MDBPopoverBody>
-              Sed posuere consectetur est at lobortis. Aenean eu leo quam.
-              Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+              venenatis vestibulum.
             </MDBPopoverBody>
           </div>
         </MDBPopover>
@@ -50,8 +38,8 @@ const PopoverPage = () => {
           <div>
             <MDBPopoverHeader>popover on right</MDBPopoverHeader>
             <MDBPopoverBody>
-              Sed posuere consectetur est at lobortis. Aenean eu leo quam.
-              Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+              venenatis vestibulum.
             </MDBPopoverBody>
           </div>
         </MDBPopover>
@@ -61,8 +49,8 @@ const PopoverPage = () => {
           <div>
             <MDBPopoverHeader>popover on bottom</MDBPopoverHeader>
             <MDBPopoverBody>
-              Sed posuere consectetur est at lobortis. Aenean eu leo quam.
-              Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+              venenatis vestibulum.
             </MDBPopoverBody>
           </div>
         </MDBPopover>
@@ -72,25 +60,19 @@ const PopoverPage = () => {
           <div>
             <MDBPopoverHeader>popover on top</MDBPopoverHeader>
             <MDBPopoverBody>
-              Sed posuere consectetur est at lobortis. Aenean eu leo quam.
-              Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+              venenatis vestibulum.
             </MDBPopoverBody>
           </div>
         </MDBPopover>
       </SectionContainer>
 
-      <SectionContainer
-        header='With image'
-        className='d-flex justify-content-center py-5'
-      >
+      <SectionContainer header='With image' className='d-flex justify-content-center py-5'>
         <MDBPopover placement='left' popover isVisible clickable id='popper5'>
           <MDBBtn color='purple'>popover on left</MDBBtn>
           <div>
             <MDBPopoverBody>
-              <img
-                src='https://mdbootstrap.com/img/Others/documentation/img%20(30)-mini.jpg'
-                alt=''
-              />
+              <img src='https://mdbootstrap.com/img/Others/documentation/img%20(30)-mini.jpg' alt='' />
             </MDBPopoverBody>
           </div>
         </MDBPopover>
@@ -99,10 +81,7 @@ const PopoverPage = () => {
           <MDBBtn color='purple'>popover on bottom</MDBBtn>
           <div>
             <MDBPopoverBody>
-              <img
-                src='https://mdbootstrap.com/img/logo/mdb192x192.jpg'
-                alt=''
-              />
+              <img src='https://mdbootstrap.com/img/logo/mdb192x192.jpg' alt='' />
             </MDBPopoverBody>
           </div>
         </MDBPopover>

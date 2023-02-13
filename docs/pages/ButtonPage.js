@@ -10,17 +10,14 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBBtn
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const ButtonPage = () => {
   return (
     <MDBContainer>
-      <DocsLink
-        title='Buttons'
-        href='https://mdbootstrap.com/docs/react/components/buttons/'
-      />
+      <DocsLink title='Buttons' href='https://mdbootstrap.com/docs/react/components/buttons/' />
 
       <SectionContainer className='text-center' header='Disabled'>
         <MDBBtn disabled color='primary'>
@@ -32,12 +29,7 @@ const ButtonPage = () => {
       </SectionContainer>
 
       <SectionContainer className='text-center' header='Active'>
-        <MDBBtn
-          active
-          href='https://www.mdbootstrap.com'
-          target='_blank'
-          color='primary'
-        >
+        <MDBBtn active href='https://www.mdbootstrap.com' target='_blank' color='primary'>
           Primary href target blank
         </MDBBtn>
         <MDBBtn active color='primary'>
@@ -140,11 +132,7 @@ const ButtonPage = () => {
         </MDBBtn>
       </SectionContainer>
 
-      <SectionContainer
-        title='Button Group'
-        header='Vertical alignment'
-        className='text-center'
-      >
+      <SectionContainer title='Button Group' header='Vertical alignment' className='text-center'>
         <MDBBtnGroup vertical>
           <MDBBtn>Left</MDBBtn>
           <MDBBtn>Middle</MDBBtn>
@@ -179,11 +167,7 @@ const ButtonPage = () => {
       </SectionContainer>
 
       <SectionContainer header='Button toolbar'>
-        <div
-          className='btn-toolbar'
-          role='toolbar'
-          aria-label='Toolbar with button groups'
-        >
+        <div className='btn-toolbar' role='toolbar' aria-label='Toolbar with button groups'>
           <MDBBtnGroup className='mr-2'>
             <MDBBtn>1</MDBBtn>
             <MDBBtn>2</MDBBtn>
@@ -223,10 +207,7 @@ const ButtonPage = () => {
         </MDBBtnGroup>
       </SectionContainer>
 
-      <SectionContainer
-        header='Vertical variation'
-        className='d-flex justify-content-center'
-      >
+      <SectionContainer header='Vertical variation' className='d-flex justify-content-center'>
         <MDBCol xl='2' lg='3' md='4' className='mb-md-0 mb-4'>
           <MDBBtnGroup vertical>
             <MDBBtn color='amber' className='ml-0'>
@@ -301,11 +282,7 @@ const ButtonPage = () => {
             </MDBBtnGroup>
           </MDBCol>
 
-          <MDBCol
-            xl='4'
-            md='12'
-            className='mb-xl-0 mb-4 d-flex justify-content-center'
-          >
+          <MDBCol xl='4' md='12' className='mb-xl-0 mb-4 d-flex justify-content-center'>
             <MDBBtnGroup vertical>
               <MDBBtn color='primary'>1</MDBBtn>
               <MDBBtn color='pink'>2</MDBBtn>

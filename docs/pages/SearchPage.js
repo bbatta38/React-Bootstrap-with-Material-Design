@@ -13,7 +13,7 @@ import {
   MDBBtn,
   MDBListGroup,
   MDBListGroupItem
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 import './Search.css';
@@ -224,17 +224,12 @@ class SearchPage extends Component {
     modalOpen: false
   };
 
-  handleSearch = event =>
-    this.setState({ searchValue: event.target.value }, () =>
-      this.searchForCountry()
-    );
+  handleSearch = event => this.setState({ searchValue: event.target.value }, () => this.searchForCountry());
 
   searchForCountry = () => {
     const { searchValue } = this.state;
     this.setState(prevState => {
-      const filteredSet = prevState.dataSet.filter(item =>
-        item.toLowerCase().match(searchValue.toLowerCase())
-      );
+      const filteredSet = prevState.dataSet.filter(item => item.toLowerCase().match(searchValue.toLowerCase()));
       return { filteredSet };
     });
   };
@@ -248,25 +243,15 @@ class SearchPage extends Component {
     const { modalOpen, searchValue, filteredSet } = this.state;
     return (
       <MDBContainer>
-        <DocsLink
-          title='Search'
-          href='https://mdbootstrap.com/docs/react/forms/search/'
-        />
+        <DocsLink title='Search' href='https://mdbootstrap.com/docs/react/forms/search/' />
 
         <SectionContainer>
           <MDBRow className='d-flex align-items-center'>
             <MDBCol md='6'>
-              <MDBBtn onClick={this.toggleModal}>
-                Search for country example
-              </MDBBtn>
+              <MDBBtn onClick={this.toggleModal}>Search for country example</MDBBtn>
             </MDBCol>
             <MDBCol md='6'>
-              <input
-                className='form-control'
-                type='text'
-                placeholder='Search'
-                aria-label='Search'
-              />
+              <input className='form-control' type='text' placeholder='Search' aria-label='Search' />
             </MDBCol>
           </MDBRow>
         </SectionContainer>
@@ -274,85 +259,31 @@ class SearchPage extends Component {
         <SectionContainer header='Search with colorful border'>
           <MDBRow>
             <MDBCol md='6'>
-              <MDBInput
-                hint='Search'
-                type='text'
-                containerClass='active-pink active-pink-2 mt-0 mb-3'
-              />
-              <MDBInput
-                hint='Search'
-                type='text'
-                containerClass='active-purple active-purple-2 mt-0 mb-3'
-              />
-              <MDBInput
-                hint='Search'
-                type='text'
-                containerClass='active-cyan active-cyan-2 mt-0 mb-3'
-              />
-              <MDBInput
-                hint='Search'
-                type='text'
-                containerClass='active-pink-2 mt-0 mb-3'
-              />
-              <MDBInput
-                hint='Search'
-                type='text'
-                containerClass='active-purple-2 mt-0 mb-3'
-              />
-              <MDBInput
-                hint='Search'
-                type='text'
-                containerClass='active-cyan-2 active-purple-2 mt-0 mb-3'
-              />
+              <MDBInput hint='Search' type='text' containerClass='active-pink active-pink-2 mt-0 mb-3' />
+              <MDBInput hint='Search' type='text' containerClass='active-purple active-purple-2 mt-0 mb-3' />
+              <MDBInput hint='Search' type='text' containerClass='active-cyan active-cyan-2 mt-0 mb-3' />
+              <MDBInput hint='Search' type='text' containerClass='active-pink-2 mt-0 mb-3' />
+              <MDBInput hint='Search' type='text' containerClass='active-purple-2 mt-0 mb-3' />
+              <MDBInput hint='Search' type='text' containerClass='active-cyan-2 active-purple-2 mt-0 mb-3' />
             </MDBCol>
             <MDBCol md='6'>
               <div className='active-pink-3 active-pink-4 mb-3'>
-                <input
-                  className='form-control'
-                  type='text'
-                  placeholder='Search'
-                  aria-label='Search'
-                />
+                <input className='form-control' type='text' placeholder='Search' aria-label='Search' />
               </div>
               <div className='active-purple-3 active-purple-4 mb-3'>
-                <input
-                  className='form-control'
-                  type='text'
-                  placeholder='Search'
-                  aria-label='Search'
-                />
+                <input className='form-control' type='text' placeholder='Search' aria-label='Search' />
               </div>
               <div className='active-cyan-3 active-cyan-4 mb-3'>
-                <input
-                  className='form-control'
-                  type='text'
-                  placeholder='Search'
-                  aria-label='Search'
-                />
+                <input className='form-control' type='text' placeholder='Search' aria-label='Search' />
               </div>
               <div className='active-pink-4 mb-3'>
-                <input
-                  className='form-control'
-                  type='text'
-                  placeholder='Search'
-                  aria-label='Search'
-                />
+                <input className='form-control' type='text' placeholder='Search' aria-label='Search' />
               </div>
               <div className='active-purple-4 mb-3'>
-                <input
-                  className='form-control'
-                  type='text'
-                  placeholder='Search'
-                  aria-label='Search'
-                />
+                <input className='form-control' type='text' placeholder='Search' aria-label='Search' />
               </div>
               <div className='active-cyan-4 mb-3'>
-                <input
-                  className='form-control'
-                  type='text'
-                  placeholder='Search'
-                  aria-label='Search'
-                />
+                <input className='form-control' type='text' placeholder='Search' aria-label='Search' />
               </div>
             </MDBCol>
           </MDBRow>
@@ -505,51 +436,27 @@ class SearchPage extends Component {
         <SectionContainer header='Search with input group'>
           <div className='input-group md-form form-sm form-1 pl-0'>
             <div className='input-group-prepend'>
-              <span
-                className='input-group-text purple lighten-3'
-                id='basic-text1'
-              >
+              <span className='input-group-text purple lighten-3' id='basic-text1'>
                 <MDBIcon icon='search' className='text-grey' />
               </span>
             </div>
-            <input
-              className='form-control my-0 py-1'
-              type='text'
-              placeholder='Search'
-              aria-label='Search'
-            />
+            <input className='form-control my-0 py-1' type='text' placeholder='Search' aria-label='Search' />
           </div>
           <div className='input-group md-form form-sm form-1 pl-0'>
             <div className='input-group-prepend'>
-              <span
-                className='input-group-text cyan lighten-2'
-                id='basic-text1'
-              >
+              <span className='input-group-text cyan lighten-2' id='basic-text1'>
                 <MDBIcon icon='search' className='text-grey' />
               </span>
             </div>
-            <input
-              className='form-control my-0 py-1'
-              type='text'
-              placeholder='Search'
-              aria-label='Search'
-            />
+            <input className='form-control my-0 py-1' type='text' placeholder='Search' aria-label='Search' />
           </div>
           <div className='input-group md-form form-sm form-1 pl-0'>
             <div className='input-group-prepend'>
-              <span
-                className='input-group-text pink lighten-3'
-                id='basic-text1'
-              >
+              <span className='input-group-text pink lighten-3' id='basic-text1'>
                 <MDBIcon icon='search' className='text-grey' />
               </span>
             </div>
-            <input
-              className='form-control my-0 py-1'
-              type='text'
-              placeholder='Search'
-              aria-label='Search'
-            />
+            <input className='form-control my-0 py-1' type='text' placeholder='Search' aria-label='Search' />
           </div>
           <div className='input-group md-form form-sm form-2 pl-0'>
             <input
@@ -559,10 +466,7 @@ class SearchPage extends Component {
               aria-label='Search'
             />
             <div className='input-group-append'>
-              <span
-                className='input-group-text amber lighten-3'
-                id='basic-text1'
-              >
+              <span className='input-group-text amber lighten-3' id='basic-text1'>
                 <MDBIcon icon='search' className='text-grey' />
               </span>
             </div>
@@ -575,21 +479,13 @@ class SearchPage extends Component {
               aria-label='Search'
             />
             <div className='input-group-append'>
-              <span
-                className='input-group-text lime lighten-2'
-                id='basic-text1'
-              >
+              <span className='input-group-text lime lighten-2' id='basic-text1'>
                 <MDBIcon icon='search' className='text-grey' />
               </span>
             </div>
           </div>
           <div className='input-group md-form form-sm form-2 pl-0'>
-            <input
-              className='form-control my-0 py-1 red-border'
-              type='text'
-              placeholder='Search'
-              aria-label='Search'
-            />
+            <input className='form-control my-0 py-1 red-border' type='text' placeholder='Search' aria-label='Search' />
             <div className='input-group-append'>
               <span className='input-group-text red lighten-3' id='basic-text1'>
                 <MDBIcon icon='search' className='text-grey' />
@@ -598,14 +494,7 @@ class SearchPage extends Component {
           </div>
         </SectionContainer>
 
-        <MDBModal
-          isOpen={modalOpen}
-          toggle={this.toggleModal}
-          backdrop={false}
-          size='sm'
-          side
-          position='top-right'
-        >
+        <MDBModal isOpen={modalOpen} toggle={this.toggleModal} backdrop={false} size='sm' side position='top-right'>
           <MDBModalHeader toggle={this.toggleModal}>Modal title</MDBModalHeader>
           <MDBModalBody>
             <MDBInput

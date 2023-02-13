@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  MDBContainer,
-  MDBRow,
-  MDBAnimation,
-  MDBCol,
-  MDBJumbotron,
-  MDBIcon,
-  MDBEdgeHeader
-} from 'mdbreact';
+import { MDBContainer, MDBRow, MDBAnimation, MDBCol, MDBJumbotron, MDBIcon, MDBEdgeHeader } from 'louis-mdbreact';
 import MenuLink from '../components/menuLink';
 
 const ComponentsNavPage = () => {
@@ -24,7 +16,9 @@ const ComponentsNavPage = () => {
                   Components
                 </h1>
                 <ul className='list-unstyled example-components-list'>
-                  <h6 className='mt-3 grey-text'><strong>FREE</strong> </h6>
+                  <h6 className='mt-3 grey-text'>
+                    <strong>FREE</strong>{' '}
+                  </h6>
                   <MenuLink to='/components/badge' title='Badge' />
                   <MenuLink to='/components/buttons' title='Buttons' />
                   <MenuLink to='/components/cards' title='Cards' />
@@ -38,7 +32,6 @@ const ComponentsNavPage = () => {
                   <MenuLink to='/components/spinner' title='Loader/Spinner' />
                   <MenuLink to='/components/tabs' title='Tabs' />
                   <MenuLink to='/components/pills' title='Pills' />
-                  
                 </ul>
               </MDBJumbotron>
             </MDBCol>

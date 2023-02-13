@@ -1,15 +1,12 @@
 import React from 'react';
-import { MDBContainer } from 'mdbreact';
+import { MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const SpinnerPage = () => {
   return (
     <MDBContainer>
-      <DocsLink
-        title='Loader/Spinner'
-        href='https://mdbootstrap.com/docs/react/components/spinners/'
-      />
+      <DocsLink title='Loader/Spinner' href='https://mdbootstrap.com/docs/react/components/spinners/' />
 
       <SectionContainer header='Colorful'>
         <div className='my-5 d-flex justify-content-around'>

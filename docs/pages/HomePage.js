@@ -13,7 +13,7 @@ import {
   MDBCardText,
   MDBAnimation,
   MDBNavLink
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import './HomePage.css';
 
 class HomePage extends React.Component {
@@ -26,10 +26,7 @@ class HomePage extends React.Component {
         <div className='mt-3 mb-5'>
           <MDBFreeBird>
             <MDBRow>
-              <MDBCol
-                md='10'
-                className='mx-auto float-none white z-depth-1 py-2 px-2'
-              >
+              <MDBCol md='10' className='mx-auto float-none white z-depth-1 py-2 px-2'>
                 <MDBCardBody className='text-center'>
                   <h2 className='h2-responsive mb-4'>
                     <strong className='font-weight-bold'>
@@ -44,8 +41,7 @@ class HomePage extends React.Component {
                   <MDBRow />
                   <p>React Bootstrap with Material Design</p>
                   <p className='pb-4'>
-                    This application shows the actual use of MDB React
-                    components in the application.
+                    This application shows the actual use of MDB React components in the application.
                   </p>
                   <MDBRow className='d-flex flex-row justify-content-center row'>
                     <a
@@ -55,9 +51,7 @@ class HomePage extends React.Component {
                       rel='noopener noreferrer'
                     >
                       <MDBIcon icon='graduation-cap' className='mr-2' />
-                      <span className='font-weight-bold'>
-                        Official Documentation
-                      </span>
+                      <span className='font-weight-bold'>Official Documentation</span>
                     </a>
                     <a
                       className='border nav-link border-light rounded mx-2 mb-2'
@@ -85,20 +79,17 @@ class HomePage extends React.Component {
           <MDBContainer>
             <MDBRow>
               <MDBCol md='12' className='mt-4'>
-                <h2 className='text-center my-5 font-weight-bold'>
-                  Why is it so great?
-                </h2>
+                <h2 className='text-center my-5 font-weight-bold'>Why is it so great?</h2>
                 <p className='text-center text-muted mb-1'>
-                  Google has designed a Material Design to make the web more
-                  beautiful and more user-friendly.
+                  Google has designed a Material Design to make the web more beautiful and more user-friendly.
                 </p>
                 <p className='text-center text-muted mb-1'>
-                  Twitter has created a Bootstrap to support you in faster and
-                  easier development of responsive and effective websites.
+                  Twitter has created a Bootstrap to support you in faster and easier development of responsive and
+                  effective websites.
                 </p>
                 <p className='text-center text-muted'>
-                  We present you a framework containing the best features of
-                  both of them - Material Design for Bootstrap.
+                  We present you a framework containing the best features of both of them - Material Design for
+                  Bootstrap.
                 </p>
                 <hr className='my-5' />
 
@@ -113,16 +104,12 @@ class HomePage extends React.Component {
                         />
                         <MDBCardBody cascade className='text-center'>
                           <MDBCardTitle>
-                            <MDBIcon
-                              icon='css3'
-                              brand
-                              className='pink-text pr-2'
-                            />
+                            <MDBIcon icon='css3' brand className='pink-text pr-2' />
                             <strong>CSS</strong>
                           </MDBCardTitle>
                           <MDBCardText>
-                            Animations, colours, shadows, skins and many more!
-                            Get to know all our css styles in one place.
+                            Animations, colours, shadows, skins and many more! Get to know all our css styles in one
+                            place.
                           </MDBCardText>
                           <MDBNavLink
                             tag='button'
@@ -151,8 +138,8 @@ class HomePage extends React.Component {
                             <strong>COMPONENTS</strong>
                           </MDBCardTitle>
                           <MDBCardText>
-                            Ready-to-use components that you can use in your
-                            applications. Both basic and extended versions!
+                            Ready-to-use components that you can use in your applications. Both basic and extended
+                            versions!
                           </MDBCardText>
                           <MDBNavLink
                             tag='button'
@@ -181,8 +168,7 @@ class HomePage extends React.Component {
                             <strong>ADVANCED</strong>
                           </MDBCardTitle>
                           <MDBCardText>
-                            Advanced components such as carousels,
-                            tooltips and popovers. All in Material Design
+                            Advanced components such as carousels, tooltips and popovers. All in Material Design
                             version.
                           </MDBCardText>
 
@@ -216,9 +202,8 @@ class HomePage extends React.Component {
                             <strong>NAVIGATION</strong>
                           </MDBCardTitle>
                           <MDBCardText>
-                            Ready-to-use navigation layouts, navbars,
-                            breadcrumbs and much more! More about our navigation
-                            components.
+                            Ready-to-use navigation layouts, navbars, breadcrumbs and much more! More about our
+                            navigation components.
                           </MDBCardText>
 
                           <MDBNavLink
@@ -248,8 +233,7 @@ class HomePage extends React.Component {
                             <strong>FORMS</strong>
                           </MDBCardTitle>
                           <MDBCardText className='mb-4 pb-3'>
-                            Inputselecst, date and time pickers. Everything in
-                            one place is ready to use!
+                            Inputselecst, date and time pickers. Everything in one place is ready to use!
                           </MDBCardText>
 
                           <MDBNavLink
@@ -279,8 +263,8 @@ class HomePage extends React.Component {
                             <strong>TABLES</strong>
                           </MDBCardTitle>
                           <MDBCardText>
-                            Basic and advanced tables. Responsive, datatables,
-                            with sorting, searching and export to csv.
+                            Basic and advanced tables. Responsive, datatables, with sorting, searching and export to
+                            csv.
                           </MDBCardText>
 
                           <MDBNavLink
@@ -309,17 +293,12 @@ class HomePage extends React.Component {
                         />
                         <MDBCardBody cascade className='text-center'>
                           <MDBCardTitle>
-                            <MDBIcon
-                              icon='window-restore'
-                              far
-                              className='pink-text pr-2'
-                            />
+                            <MDBIcon icon='window-restore' far className='pink-text pr-2' />
                             <strong>MODALS</strong>
                           </MDBCardTitle>
                           <MDBCardText>
-                            Modals used to display advanced messages to the
-                            user. Cookies, logging in, registration and much
-                            more.
+                            Modals used to display advanced messages to the user. Cookies, logging in, registration and
+                            much more.
                           </MDBCardText>
 
                           <MDBNavLink
@@ -345,16 +324,12 @@ class HomePage extends React.Component {
                         />
                         <MDBCardBody cascade className='text-center'>
                           <MDBCardTitle>
-                            <MDBIcon
-                              icon='arrows-alt'
-                              className='blue-text pr-2'
-                            />
+                            <MDBIcon icon='arrows-alt' className='blue-text pr-2' />
                             <strong>PLUGINS & ADDONS</strong>
                           </MDBCardTitle>
                           <MDBCardText>
-                            Google Maps, Social Buttons, Pre-built Contact Forms
-                            and Steppers. Find out more about our extended
-                            components.
+                            Google Maps, Social Buttons, Pre-built Contact Forms and Steppers. Find out more about our
+                            extended components.
                           </MDBCardText>
 
                           <MDBNavLink
@@ -370,7 +345,6 @@ class HomePage extends React.Component {
                       </MDBCard>
                     </MDBAnimation>
                   </MDBCol>
-                  
                 </MDBRow>
               </MDBCol>
             </MDBRow>

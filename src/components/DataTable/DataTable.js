@@ -188,10 +188,15 @@ class DataTable extends Component {
 
               if (sortRows && typeof row[key] !== 'string') {
                 const content = [];
-                const getContent = element =>
-                  typeof element === 'object'
-                    ? element.props.children && Array.from(element.props.children).map(el => getContent(el))
-                    : content.push(element);
+                const getContent = element => {
+                  if (!element) {
+                    return typeof element === 'object'
+                      ? element.props.children && Array.from(element.props.children).map(el => getContent(el))
+                      : content.push(element);
+                  } else {
+                    content.push('');
+                  }
+                };
 
                 getContent(row[key]);
                 stringValue = content.join('');

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBAnimation } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBAnimation } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
@@ -187,9 +187,7 @@ class AnimationPage extends React.Component {
       animation: this.animation('', false, 0)
     });
   }
-  setAnimation = (
-    { animations, infinite, loop, duration, delay } = this.state
-  ) => {
+  setAnimation = ({ animations, infinite, loop, duration, delay } = this.state) => {
     this.setState(
       {
         animation: this.animation(animations, infinite, loop, duration, delay)
@@ -200,9 +198,7 @@ class AnimationPage extends React.Component {
 
   getValueOfSelect = e => {
     const { value } = e.target;
-    this.setState({ animations: value.replace(/\s+/g, '') }, () =>
-      this.setAnimation()
-    );
+    this.setState({ animations: value.replace(/\s+/g, '') }, () => this.setAnimation());
   };
 
   getCount = e => {
@@ -216,32 +212,23 @@ class AnimationPage extends React.Component {
   getDuration = e => {
     const { value } = e.target;
     console.log(value);
-    this.setState({ animation: null, duration: value || '800ms' }, () =>
-      this.setAnimation()
-    );
+    this.setState({ animation: null, duration: value || '800ms' }, () => this.setAnimation());
   };
 
   getDelay = e => {
     const { value } = e.target;
     console.log(value);
-    this.setState({ animation: null, delay: value || '0' }, () =>
-      this.setAnimation()
-    );
+    this.setState({ animation: null, delay: value || '0' }, () => this.setAnimation());
   };
 
   render() {
     const { animation, delay, duration, loop, selects } = this.state;
     return (
       <MDBContainer className='mt-5'>
-        <DocsLink
-          title='Animations'
-          href='https://mdbootstrap.com/docs/react/css/animations/'
-        />
+        <DocsLink title='Animations' href='https://mdbootstrap.com/docs/react/css/animations/' />
 
         <SectionContainer header='Examples & customizations'>
-          <MDBRow className='d-flex align-items-center justify-content-center'>
-            {animation}
-          </MDBRow>
+          <MDBRow className='d-flex align-items-center justify-content-center'>{animation}</MDBRow>
           <MDBRow className='d-flex justify-content-center'>
             <MDBCol md='2'>
               <label htmlFor='animationLoops'>Loops</label>
@@ -294,10 +281,7 @@ class AnimationPage extends React.Component {
 
           <MDBRow className='d-flex flex-wrap'>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>ATTENTION SPEEKERS</option>
                 {selects.attentionSeekers.map(select => (
                   <option key={select.value} value={select.text}>
@@ -307,10 +291,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>FLIPPERS</option>
                 {selects.specials.map(select => (
                   <option key={select.value} value={select.text}>
@@ -320,10 +301,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>BOUNCING ENTRANCES</option>
                 {selects.bouncingEntrances.map(select => (
                   <option key={select.value} value={select.text}>
@@ -333,10 +311,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>BOUNCING EXITS</option>
                 {selects.bouncingExits.map(select => (
                   <option key={select.value} value={select.text}>
@@ -346,10 +321,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>FADING ENTRANCES</option>
                 {selects.fadingEntrances.map(select => (
                   <option key={select.value} value={select.text}>
@@ -359,10 +331,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>FADING EXITS</option>
                 {selects.fadingExits.map(select => (
                   <option key={select.value} value={select.text}>
@@ -372,10 +341,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>FLIPPERS</option>
                 {selects.flippers.map(select => (
                   <option key={select.value} value={select.text}>
@@ -385,10 +351,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>LIGHT SPEED</option>
                 {selects.lightSpeed.map(select => (
                   <option key={select.value} value={select.text}>
@@ -398,10 +361,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>ROTATING ENTRANCES</option>
                 {selects.rotatingEntrances.map(select => (
                   <option key={select.value} value={select.text}>
@@ -411,10 +371,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>ROTATING EXITS</option>
                 {selects.rotatingExits.map(select => (
                   <option key={select.value} value={select.text}>
@@ -424,10 +381,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>SLIDING ENTRANCES</option>
                 {selects.slidingEntrances.map(select => (
                   <option key={select.value} value={select.text}>
@@ -437,10 +391,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>SLIDING EXITS</option>
                 {selects.slidingExits.map(select => (
                   <option key={select.value} value={select.text}>
@@ -450,10 +401,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>ZOOM ENTRANCES</option>
                 {selects.zoomEntrances.map(select => (
                   <option key={select.value} value={select.text}>
@@ -463,10 +411,7 @@ class AnimationPage extends React.Component {
               </select>
             </MDBCol>
             <MDBCol md='6'>
-              <select
-                className='browser-default custom-select my-4'
-                onChange={this.getValueOfSelect}
-              >
+              <select className='browser-default custom-select my-4' onChange={this.getValueOfSelect}>
                 <option>ZOOM EXITS</option>
                 {selects.zoomExits.map(select => (
                   <option key={select.value} value={select.text}>
@@ -534,9 +479,7 @@ class AnimationPage extends React.Component {
               <MDBAnimation
                 reveal
                 type='fadeInUp'
-                onAnimationEnd={() =>
-                  console.log('The last picture has been revealed')
-                }
+                onAnimationEnd={() => console.log('The last picture has been revealed')}
               >
                 <img
                   alt='Rocky shore in the morning.'

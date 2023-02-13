@@ -10,7 +10,7 @@ import {
   MDBTableBody,
   MDBTableHead,
   MDBIcon
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
@@ -169,10 +169,7 @@ const TableStylesPage = props => {
       },
       {
         id: 2,
-        lorem: [
-          <MDBIcon key='cell1' icon='graduation-cap' className='mr-2 grey-text' aria-hidden='true' />,
-          'Cell1'
-        ],
+        lorem: [<MDBIcon key='cell1' icon='graduation-cap' className='mr-2 grey-text' aria-hidden='true' />, 'Cell1'],
         ipsum: [<MDBIcon key='cell2' icon='gift' className='mr-2 grey-text' aria-hidden='true' />, 'Cell2'],
         dolor: [<MDBIcon key='cell3' icon='image' className='mr-2 grey-text' aria-hidden='true' />, 'Cell3']
       },
@@ -187,10 +184,7 @@ const TableStylesPage = props => {
 
   return (
     <MDBContainer className='mt-3'>
-      <DocsLink
-        title='Tables with additional elements'
-        href='https://mdbootstrap.com/docs/react/tables/additional/'
-      />
+      <DocsLink title='Tables with additional elements' href='https://mdbootstrap.com/docs/react/tables/additional/' />
       <MDBRow className='py-3'>
         <MDBCol md='12'>
           <SectionContainer header='With regular buttons' noBorder>

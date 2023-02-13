@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MDBContainer } from 'mdbreact';
+import { MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 import './Masonry.css';
@@ -27,10 +27,7 @@ class MasonryPage extends React.Component {
   render() {
     return (
       <MDBContainer className='mt-5'>
-        <DocsLink
-          title='Masks'
-          href='https://mdbootstrap.com/docs/react/css/masks/'
-        />
+        <DocsLink title='Masks' href='https://mdbootstrap.com/docs/react/css/masks/' />
 
         <SectionContainer noBorder header='Column layout'>
           <div className='masonry-with-columns mx-0' ref={this.MasonryRef}>

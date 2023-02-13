@@ -1,22 +1,12 @@
 import React from 'react';
-import {
-  MDBBreadcrumb,
-  MDBBreadcrumbItem,
-  MDBContainer,
-  MDBNavbar,
-  MDBNavbarNav,
-  MDBNavItem
-} from 'mdbreact';
+import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer, MDBNavbar, MDBNavbarNav, MDBNavItem } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const BreadcrumbPage = props => {
   return (
     <MDBContainer>
-      <DocsLink
-        title='Breadcrumb'
-        href='https://mdbootstrap.com/docs/react/navigation/breadcrumb/'
-      />
+      <DocsLink title='Breadcrumb' href='https://mdbootstrap.com/docs/react/navigation/breadcrumb/' />
 
       <SectionContainer header='Basic examples'>
         <MDBBreadcrumb>

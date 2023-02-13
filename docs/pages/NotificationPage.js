@@ -1,15 +1,12 @@
 import React from 'react';
-import { MDBNotification, MDBContainer } from 'mdbreact';
+import { MDBNotification, MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const NotificationPage = () => {
   return (
     <MDBContainer>
-      <DocsLink
-        title='Notifications'
-        href='https://mdbootstrap.com/docs/react/addons/notification/'
-      />
+      <DocsLink title='Notifications' href='https://mdbootstrap.com/docs/react/addons/notification/' />
 
       <SectionContainer header='Default'>
         <MDBNotification
@@ -22,10 +19,7 @@ const NotificationPage = () => {
         />
       </SectionContainer>
 
-      <SectionContainer
-        title='Accessibility'
-        description='Notification with autohide! Refresh page and wait 3 sec'
-      >
+      <SectionContainer title='Accessibility' description='Notification with autohide! Refresh page and wait 3 sec'>
         <MDBNotification
           iconClassName='text-primary'
           show
@@ -99,8 +93,7 @@ const NotificationPage = () => {
         </SectionContainer>
         <SectionContainer
           style={{
-            backgroundImage:
-              "url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(122).jpg')",
+            backgroundImage: "url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(122).jpg')",
             minHeight: '350px'
           }}
         >

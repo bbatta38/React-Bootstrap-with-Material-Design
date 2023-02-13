@@ -13,7 +13,7 @@ import {
   MDBTable,
   MDBTableBody,
   MDBTableHead
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import './ModalExamplesPage.css';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
@@ -42,39 +42,17 @@ class ModalExamplesPage extends Component {
   };
 
   render() {
-    const {
-      modal1,
-      modal10,
-      modal11,
-      modal12,
-      modal2,
-      modal3,
-      modal4,
-      modal5,
-      modal6,
-      modal7
-    } = this.state;
+    const { modal1, modal10, modal11, modal12, modal2, modal3, modal4, modal5, modal6, modal7 } = this.state;
     return (
       <MDBContainer>
-        <DocsLink
-          title='Modal Templates & Examples'
-          href='https://mdbootstrap.com/docs/react/modals/basic/'
-        />
+        <DocsLink title='Modal Templates & Examples' href='https://mdbootstrap.com/docs/react/modals/basic/' />
 
         <SectionContainer header='Cookies' flexCenter>
           <MDBBtn onClick={this.toggle(1)}>Launch Modal</MDBBtn>
-          <MDBModal
-            position='top'
-            backdrop={false}
-            frame
-            isOpen={modal1}
-            toggle={this.toggle(1)}
-          >
+          <MDBModal position='top' backdrop={false} frame isOpen={modal1} toggle={this.toggle(1)}>
             <MDBModalBody>
               <MDBRow className='justify-content-center align-items-center'>
-                <p className='pt-3 pr-2'>
-                  We use cookies to improve your website experience
-                </p>
+                <p className='pt-3 pr-2'>We use cookies to improve your website experience</p>
                 <MDBBtn color='primary' onClick={this.toggle(1)}>
                   Learn more
                   <MDBIcon icon='book' className='ml-1' />
@@ -89,21 +67,14 @@ class ModalExamplesPage extends Component {
 
         <SectionContainer header='Coupon' flexCenter>
           <MDBBtn onClick={this.toggle(2)}>Launch Modal</MDBBtn>
-          <MDBModal
-            position='bottom'
-            backdrop={false}
-            frame
-            isOpen={modal2}
-            toggle={this.toggle(2)}
-          >
+          <MDBModal position='bottom' backdrop={false} frame isOpen={modal2} toggle={this.toggle(2)}>
             <MDBModalBody>
               <MDBRow className='justify-content-center align-items-center'>
                 <h3>
                   <MDBBadge color='success'>v52gs1</MDBBadge>
                 </h3>
                 <p className='pt-3 mx-4'>
-                  We have a gift for you! Use this code to get a{' '}
-                  <strong>10% discount</strong>.
+                  We have a gift for you! Use this code to get a <strong>10% discount</strong>.
                 </p>
                 <MDBBtn color='success' onClick={this.toggle(2)}>
                   Learn more
@@ -133,21 +104,17 @@ class ModalExamplesPage extends Component {
             </MDBModalHeader>
             <MDBModalBody>
               <MDBRow>
-                <MDBCol
-                  size='3'
-                  className='d-flex justify-content-center align-items-center'
-                >
+                <MDBCol size='3' className='d-flex justify-content-center align-items-center'>
                   <MDBIcon size='4x' icon='gift' className='ml-1' />
                 </MDBCol>
                 <MDBCol size='9'>
                   <p>
-                    Sharing is caring. Therefore, from time to time we like to
-                    give our visitors small gifts. Today is one of those days.
+                    Sharing is caring. Therefore, from time to time we like to give our visitors small gifts. Today is
+                    one of those days.
                   </p>
                   <p>
                     <strong>
-                      Copy the following code and use it at the checkout. It's
-                      valid for <u>one day</u>.
+                      Copy the following code and use it at the checkout. It's valid for <u>one day</u>.
                     </strong>
                   </p>
                   <h3>
@@ -194,15 +161,8 @@ class ModalExamplesPage extends Component {
                   <p>
                     <strong>My travel to paradise</strong>
                   </p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit...
-                  </p>
-                  <MDBBtn
-                    color='primary'
-                    size='md'
-                    outline
-                    onClick={this.toggle(4)}
-                  >
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                  <MDBBtn color='primary' size='md' outline onClick={this.toggle(4)}>
                     Read more
                   </MDBBtn>
                 </MDBCol>
@@ -226,18 +186,12 @@ class ModalExamplesPage extends Component {
             </MDBModalHeader>
             <MDBModalBody>
               <MDBRow>
-                <MDBCol
-                  size='3'
-                  className='d-flex justify-content-center align-items-center'
-                >
+                <MDBCol size='3' className='d-flex justify-content-center align-items-center'>
                   <MDBIcon size='4x' icon='shopping-cart' className='ml-1' />
                 </MDBCol>
                 <MDBCol size='9'>
                   <p>Do you need more time to make a purchase decision?</p>
-                  <p>
-                    No pressure, your product will be waiting for you in the
-                    cart.
-                  </p>
+                  <p>No pressure, your product will be waiting for you in the cart.</p>
                 </MDBCol>
               </MDBRow>
             </MDBModalBody>
@@ -264,12 +218,7 @@ class ModalExamplesPage extends Component {
             isOpen={modal6}
             toggle={this.toggle(6)}
           >
-            <MDBModalHeader
-              className='text-center'
-              titleClass='w-100'
-              tag='p'
-              toggle={this.toggle(6)}
-            >
+            <MDBModalHeader className='text-center' titleClass='w-100' tag='p' toggle={this.toggle(6)}>
               Are you sure?
             </MDBModalHeader>
             <MDBModalBody className='text-center'>
@@ -351,24 +300,13 @@ class ModalExamplesPage extends Component {
 
         <SectionContainer header='Push' flexCenter>
           <MDBBtn onClick={this.toggle(7)}>Launch Modal</MDBBtn>
-          <MDBModal
-            className='modal-notify modal-info text-white'
-            isOpen={modal7}
-            toggle={this.toggle(7)}
-          >
+          <MDBModal className='modal-notify modal-info text-white' isOpen={modal7} toggle={this.toggle(7)}>
             <MDBModalHeader className='text-center' titleClass='w-100' tag='p'>
               Be always up to date
             </MDBModalHeader>
             <MDBModalBody className='text-center'>
-              <MDBIcon
-                icon='bell'
-                size='4x'
-                className='animated rotateIn mb-4'
-              />
-              <p>
-                Do you want to receive the push notification about the newest
-                posts?
-              </p>
+              <MDBIcon icon='bell' size='4x' className='animated rotateIn mb-4' />
+              <p>Do you want to receive the push notification about the newest posts?</p>
             </MDBModalBody>
             <MDBModalFooter className='justify-content-center'>
               <MDBBtn color='primary' onClick={this.toggle(7)}>
@@ -409,14 +347,7 @@ class ModalExamplesPage extends Component {
               <MDBBtn tag='a' size='sm' floating social='li'>
                 <MDBIcon fab icon='linkedin' />
               </MDBBtn>
-              <MDBBtn
-                color='primary'
-                outline
-                rounded
-                size='md'
-                className='ml-4'
-                onClick={this.toggle(11)}
-              >
+              <MDBBtn color='primary' outline rounded size='md' className='ml-4' onClick={this.toggle(11)}>
                 Close
               </MDBBtn>
             </MDBModalFooter>
@@ -451,14 +382,7 @@ class ModalExamplesPage extends Component {
               <MDBBtn tag='a' size='sm' floating social='li'>
                 <MDBIcon icon='linkedin' fab />
               </MDBBtn>
-              <MDBBtn
-                color='primary'
-                outline
-                rounded
-                size='md'
-                className='ml-4'
-                onClick={this.toggle(12)}
-              >
+              <MDBBtn color='primary' outline rounded size='md' className='ml-4' onClick={this.toggle(12)}>
                 Close
               </MDBBtn>
             </MDBModalFooter>

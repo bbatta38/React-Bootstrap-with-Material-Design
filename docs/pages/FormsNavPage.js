@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  MDBEdgeHeader,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBJumbotron,
-  MDBIcon,
-  MDBAnimation
-} from 'mdbreact';
+import { MDBEdgeHeader, MDBContainer, MDBRow, MDBCol, MDBJumbotron, MDBIcon, MDBAnimation } from 'louis-mdbreact';
 import MenuLink from '../components/menuLink';
 
 const FormsNavPage = () => {
@@ -31,7 +23,6 @@ const FormsNavPage = () => {
                   <MenuLink to='/forms/input' title='Input' />
                   <MenuLink to='/forms/inputgroup' title='Input Group' />
                   <MenuLink to='/forms/validation' title='Validation' />
-                  
                 </ul>
               </MDBJumbotron>
             </MDBCol>

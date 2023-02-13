@@ -1,15 +1,12 @@
 import React from 'react';
-import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
+import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const HoverPage = () => {
   return (
     <MDBContainer className='mt-5'>
-      <DocsLink
-        title='Hover Effects'
-        href='https://mdbootstrap.com/docs/react/css/hover-effects/'
-      />
+      <DocsLink title='Hover Effects' href='https://mdbootstrap.com/docs/react/css/hover-effects/' />
 
       <SectionContainer header='Overlay'>
         <MDBRow>

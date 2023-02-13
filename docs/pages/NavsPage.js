@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBNav,
-  MDBNavItem,
-  MDBLink
-} from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBNav, MDBNavItem, MDBLink } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
@@ -14,10 +7,7 @@ class NavsPage extends Component {
   render() {
     return (
       <MDBContainer>
-        <DocsLink
-          title='Navs'
-          href='https://mdbootstrap.com/docs/react/navigation/navs/'
-        />
+        <DocsLink title='Navs' href='https://mdbootstrap.com/docs/react/navigation/navs/' />
 
         <SectionContainer title='Basic examples' noBorder>
           <SectionContainer header='Left'>
@@ -192,10 +182,7 @@ class NavsPage extends Component {
         <SectionContainer header='With gradient background'>
           <MDBRow>
             <MDBCol md='6'>
-              <MDBNav
-                color='peach-gradient'
-                className='font-weight-bold py-4 px-2 mb-4'
-              >
+              <MDBNav color='peach-gradient' className='font-weight-bold py-4 px-2 mb-4'>
                 <MDBLink className='white-text' active to='#!'>
                   Active
                 </MDBLink>
@@ -211,10 +198,7 @@ class NavsPage extends Component {
               </MDBNav>
             </MDBCol>
             <MDBCol md='6'>
-              <MDBNav
-                color='purple-gradient'
-                className='font-weight-bold py-4 px-2 mb-4'
-              >
+              <MDBNav color='purple-gradient' className='font-weight-bold py-4 px-2 mb-4'>
                 <MDBLink className='white-text' active to='#!'>
                   Active
                 </MDBLink>
@@ -230,10 +214,7 @@ class NavsPage extends Component {
               </MDBNav>
             </MDBCol>
             <MDBCol md='6'>
-              <MDBNav
-                color='aqua-gradient'
-                className='font-weight-bold py-4 px-2 mb-4'
-              >
+              <MDBNav color='aqua-gradient' className='font-weight-bold py-4 px-2 mb-4'>
                 <MDBLink className='white-text' active to='#!'>
                   Active
                 </MDBLink>
@@ -249,10 +230,7 @@ class NavsPage extends Component {
               </MDBNav>
             </MDBCol>
             <MDBCol md='6'>
-              <MDBNav
-                color='blue-gradient'
-                className='font-weight-bold py-4 px-2 mb-4'
-              >
+              <MDBNav color='blue-gradient' className='font-weight-bold py-4 px-2 mb-4'>
                 <MDBLink className='white-text' active to='#!'>
                   Active
                 </MDBLink>

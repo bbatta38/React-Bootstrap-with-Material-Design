@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  MDBEdgeHeader,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBJumbotron,
-  MDBIcon,
-  MDBAnimation
-} from 'mdbreact';
+import { MDBEdgeHeader, MDBContainer, MDBRow, MDBCol, MDBJumbotron, MDBIcon, MDBAnimation } from 'louis-mdbreact';
 import MenuLink from '../components/menuLink';
 
 const AddonsNavPage = () => {
@@ -32,7 +24,6 @@ const AddonsNavPage = () => {
                   <MenuLink to='/addons/notifications' title='Notifications' />
                   <MenuLink to='/addons/treeview' title='Treeview' />
                   <MenuLink to='/addons/rating' title='Rating' />
-                  
                 </ul>
               </MDBJumbotron>
             </MDBCol>

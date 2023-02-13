@@ -8,7 +8,7 @@ import {
   MDBTable,
   MDBTableBody,
   MDBTableHead
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
@@ -198,10 +198,7 @@ const TablePage = props => {
 
   return (
     <MDBContainer className='mt-3'>
-      <DocsLink
-        title='Tables'
-        href='https://mdbootstrap.com/docs/react/tables/basic/'
-      />
+      <DocsLink title='Tables' href='https://mdbootstrap.com/docs/react/tables/basic/' />
       <MDBRow className='py-3'>
         <MDBCol md='12'>
           <SectionContainer noBorder title='Basic example'>
@@ -249,11 +246,7 @@ const TablePage = props => {
             <MDBCard>
               <MDBCardBody>
                 <MDBTable className='mb-5'>
-                  <MDBTableHead
-                    columns={data.columns}
-                    color='primary-color'
-                    textWhite
-                  />
+                  <MDBTableHead columns={data.columns} color='primary-color' textWhite />
                   <MDBTableBody rows={data.rows} />
                 </MDBTable>
 
@@ -288,11 +281,7 @@ const TablePage = props => {
             <MDBCard>
               <MDBCardBody>
                 <MDBTable bordered>
-                  <MDBTableHead
-                    columns={data_collspan.columns}
-                    color='primary-color'
-                    textWhite
-                  />
+                  <MDBTableHead columns={data_collspan.columns} color='primary-color' textWhite />
                   <MDBTableBody rows={data_collspan.rows} />
                 </MDBTable>
               </MDBCardBody>
@@ -322,11 +311,7 @@ const TablePage = props => {
             <MDBCard>
               <MDBCardBody>
                 <MDBTable hover>
-                  <MDBTableHead
-                    columns={data_collspan.columns}
-                    color='secondary-color'
-                    textWhite
-                  />
+                  <MDBTableHead columns={data_collspan.columns} color='secondary-color' textWhite />
                   <MDBTableBody rows={data_collspan.rows} />
                 </MDBTable>
               </MDBCardBody>
@@ -341,11 +326,7 @@ const TablePage = props => {
             <MDBCard>
               <MDBCardBody>
                 <MDBTable small>
-                  <MDBTableHead
-                    columns={data_collspan.columns}
-                    color='primary-color'
-                    textWhite
-                  />
+                  <MDBTableHead columns={data_collspan.columns} color='primary-color' textWhite />
                   <MDBTableBody rows={data_collspan.rows} />
                 </MDBTable>
               </MDBCardBody>
@@ -361,11 +342,7 @@ const TablePage = props => {
               <MDBCardBody>
                 <MDBTable>
                   <caption>List of users</caption>
-                  <MDBTableHead
-                    columns={data.columns}
-                    color='indigo'
-                    textWhite
-                  />
+                  <MDBTableHead columns={data.columns} color='indigo' textWhite />
                   <MDBTableBody rows={data.rows} />
                 </MDBTable>
               </MDBCardBody>
@@ -380,11 +357,7 @@ const TablePage = props => {
             <MDBCard>
               <MDBCardBody>
                 <MDBTable responsive>
-                  <MDBTableHead
-                    columns={data_responsive.columns}
-                    color='primary-color'
-                    textWhite
-                  />
+                  <MDBTableHead columns={data_responsive.columns} color='primary-color' textWhite />
                   <MDBTableBody rows={data_responsive.rows} />
                 </MDBTable>
               </MDBCardBody>

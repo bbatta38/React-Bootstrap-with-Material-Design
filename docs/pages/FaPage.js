@@ -1,15 +1,12 @@
 import React from 'react';
-import { MDBIcon, MDBContainer } from 'mdbreact';
+import { MDBIcon, MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const FaPage = props => {
   return (
     <MDBContainer className='mt-3'>
-      <DocsLink
-        title='Icons'
-        href='https://mdbootstrap.com/docs/react/content/icons-usage/'
-      />
+      <DocsLink title='Icons' href='https://mdbootstrap.com/docs/react/content/icons-usage/' />
 
       <SectionContainer header='Sizing' className='text-center'>
         <p>

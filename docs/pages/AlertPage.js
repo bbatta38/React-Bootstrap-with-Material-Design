@@ -1,15 +1,12 @@
 import React from 'react';
-import { MDBContainer, MDBAlert } from 'mdbreact';
+import { MDBContainer, MDBAlert } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const AlertPage = () => {
   return (
     <MDBContainer>
-      <DocsLink
-        title='Alerts'
-        href='https://mdbootstrap.com/docs/react/advanced/alerts/'
-      />
+      <DocsLink title='Alerts' href='https://mdbootstrap.com/docs/react/advanced/alerts/' />
 
       <SectionContainer header='Basic examples'>
         <MDBAlert color='primary' dismiss>
@@ -105,15 +102,11 @@ const AlertPage = () => {
         <MDBAlert color='success'>
           <h4 className='alert-heading'>Well done!</h4>
           <p>
-            Aww yeah, you successfully read this important alert message. This
-            example text is going to run a bit longer so that you can see how
-            spacing within an alert works with this kind of content.
+            Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer
+            so that you can see how spacing within an alert works with this kind of content.
           </p>
           <hr />
-          <p className='mb-0'>
-            Whenever you need to, be sure to use margin utilities to keep things
-            nice and tidy.
-          </p>
+          <p className='mb-0'>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
         </MDBAlert>
       </SectionContainer>
 
@@ -121,19 +114,12 @@ const AlertPage = () => {
         <MDBAlert
           color='danger'
           dismiss
-          onClose={() =>
-            alert(
-              'This event fires immediately when the close instance method is called.'
-            )
-          }
+          onClose={() => alert('This event fires immediately when the close instance method is called.')}
           onClosed={() =>
-            alert(
-              'This event is fired when the alert has been closed (will wait for CSS transitions to complete).'
-            )
+            alert('This event is fired when the alert has been closed (will wait for CSS transitions to complete).')
           }
         >
-          Alert component exposes a few events for hooking into alert
-          functionality.
+          Alert component exposes a few events for hooking into alert functionality.
         </MDBAlert>
       </SectionContainer>
     </MDBContainer>

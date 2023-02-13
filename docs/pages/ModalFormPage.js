@@ -8,7 +8,7 @@ import {
   MDBModalFooter,
   MDBInput,
   MDBIcon
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
@@ -32,21 +32,14 @@ class ModalFormPage extends Component {
     const { modal1, modal2, modal3, modal4, modal5, modal6 } = this.state;
     return (
       <MDBContainer>
-        <DocsLink
-          title='Modal Form'
-          href='https://mdbootstrap.com/docs/react/modals/basic/'
-        />
+        <DocsLink title='Modal Form' href='https://mdbootstrap.com/docs/react/modals/basic/' />
 
         <SectionContainer header='Simple modal login' flexCenter>
           <MDBBtn rounded onClick={this.toggle(1)}>
             Launch Modal Login Form
           </MDBBtn>
           <MDBModal isOpen={modal1} toggle={this.toggle(1)}>
-            <MDBModalHeader
-              className='text-center'
-              titleClass='w-100 font-weight-bold'
-              toggle={this.toggle(1)}
-            >
+            <MDBModalHeader className='text-center' titleClass='w-100 font-weight-bold' toggle={this.toggle(1)}>
               Sign in
             </MDBModalHeader>
             <MDBModalBody>
@@ -60,13 +53,7 @@ class ModalFormPage extends Component {
                   error='wrong'
                   success='right'
                 />
-                <MDBInput
-                  label='Type your password'
-                  icon='lock'
-                  group
-                  type='password'
-                  validate
-                />
+                <MDBInput label='Type your password' icon='lock' group type='password' validate />
               </form>
             </MDBModalBody>
             <MDBModalFooter className='justify-content-center'>
@@ -80,24 +67,12 @@ class ModalFormPage extends Component {
             Launch Modal Register Form
           </MDBBtn>
           <MDBModal isOpen={modal2} toggle={this.toggle(2)}>
-            <MDBModalHeader
-              className='text-center'
-              titleClass='w-100 font-weight-bold'
-              toggle={this.toggle(2)}
-            >
+            <MDBModalHeader className='text-center' titleClass='w-100 font-weight-bold' toggle={this.toggle(2)}>
               Sign in
             </MDBModalHeader>
             <MDBModalBody>
               <form className='mx-3 grey-text'>
-                <MDBInput
-                  label='Your name'
-                  icon='user'
-                  group
-                  type='text'
-                  validate
-                  error='wrong'
-                  success='right'
-                />
+                <MDBInput label='Your name' icon='user' group type='text' validate error='wrong' success='right' />
                 <MDBInput
                   label='Your email'
                   icon='envelope'
@@ -107,13 +82,7 @@ class ModalFormPage extends Component {
                   error='wrong'
                   success='right'
                 />
-                <MDBInput
-                  label='Your password'
-                  icon='lock'
-                  group
-                  type='password'
-                  validate
-                />
+                <MDBInput label='Your password' icon='lock' group type='password' validate />
               </form>
             </MDBModalBody>
             <MDBModalFooter className='justify-content-center'>
@@ -129,22 +98,12 @@ class ModalFormPage extends Component {
             Launch Modal subscription Form
           </MDBBtn>
           <MDBModal isOpen={modal3} toggle={this.toggle(3)}>
-            <MDBModalHeader
-              className='text-center'
-              titleClass='w-100 font-weight-bold'
-              toggle={this.toggle(3)}
-            >
+            <MDBModalHeader className='text-center' titleClass='w-100 font-weight-bold' toggle={this.toggle(3)}>
               Subscribe
             </MDBModalHeader>
             <MDBModalBody>
               <form className='mx-3 grey-text'>
-                <MDBInput
-                  label='Your name'
-                  icon='user'
-                  group
-                  type='text'
-                  validate
-                />
+                <MDBInput label='Your name' icon='user' group type='text' validate />
                 <MDBInput
                   label='Your email'
                   icon='envelope'
@@ -170,22 +129,12 @@ class ModalFormPage extends Component {
             Launch Modal Contact Form
           </MDBBtn>
           <MDBModal isOpen={modal4} toggle={this.toggle(4)}>
-            <MDBModalHeader
-              className='text-center'
-              titleClass='w-100 font-weight-bold'
-              toggle={this.toggle(4)}
-            >
+            <MDBModalHeader className='text-center' titleClass='w-100 font-weight-bold' toggle={this.toggle(4)}>
               Write to us
             </MDBModalHeader>
             <MDBModalBody>
               <form className='mx-3 grey-text'>
-                <MDBInput
-                  label='Your name'
-                  icon='user'
-                  group
-                  type='text'
-                  validate
-                />
+                <MDBInput label='Your name' icon='user' group type='text' validate />
                 <MDBInput
                   label='Your email'
                   icon='envelope'
@@ -196,12 +145,7 @@ class ModalFormPage extends Component {
                   success='right'
                 />
                 <MDBInput label='Your Subject' icon='tag' group type='text' />
-                <MDBInput
-                  type='textarea'
-                  rows='2'
-                  label='Your message'
-                  icon='pencil'
-                />
+                <MDBInput type='textarea' rows='2' label='Your message' icon='pencil' />
               </form>
             </MDBModalBody>
             <MDBModalFooter className='justify-content-center'>
@@ -217,13 +161,7 @@ class ModalFormPage extends Component {
           <MDBBtn rounded onClick={this.toggle(5)}>
             Launch Modal Login With Avatar
           </MDBBtn>
-          <MDBModal
-            size='sm'
-            cascading
-            className='modal-avatar'
-            isOpen={modal5}
-            toggle={this.toggle(5)}
-          >
+          <MDBModal size='sm' cascading className='modal-avatar' isOpen={modal5} toggle={this.toggle(5)}>
             <MDBModalHeader className='mx-auto'>
               <img
                 src='https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg'
@@ -234,12 +172,7 @@ class ModalFormPage extends Component {
             <MDBModalBody className='text-center mb-1'>
               <h5 className='mt-1 mb-2'>Maria Doe</h5>
               <form className='mx-3 grey-text'>
-                <MDBInput
-                  label='Enter password'
-                  group
-                  type='password'
-                  validate
-                />
+                <MDBInput label='Enter password' group type='password' validate />
               </form>
             </MDBModalBody>
             <MDBModalFooter className='justify-content-center'>
@@ -251,23 +184,12 @@ class ModalFormPage extends Component {
           </MDBModal>
         </SectionContainer>
 
-        <SectionContainer
-          header='Subscription modal with orange header'
-          flexCenter
-        >
+        <SectionContainer header='Subscription modal with orange header' flexCenter>
           <MDBBtn rounded onClick={this.toggle(6)}>
             Launch Modal Subscription
           </MDBBtn>
-          <MDBModal
-            className='modal-notify modal-warning white-text'
-            isOpen={modal6}
-            toggle={this.toggle(6)}
-          >
-            <MDBModalHeader
-              className='text-center'
-              titleClass='w-100 font-weight-bold'
-              toggle={this.toggle(6)}
-            >
+          <MDBModal className='modal-notify modal-warning white-text' isOpen={modal6} toggle={this.toggle(6)}>
+            <MDBModalHeader className='text-center' titleClass='w-100 font-weight-bold' toggle={this.toggle(6)}>
               Subscribe
             </MDBModalHeader>
             <MDBModalBody>

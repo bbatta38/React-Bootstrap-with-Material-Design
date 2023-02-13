@@ -7,27 +7,17 @@ import {
   MDBView,
   MDBMask,
   MDBContainer
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const CarouselPage = () => {
   return (
     <MDBContainer className='pb-5'>
-      <DocsLink
-        title='Carousel'
-        href='https://mdbootstrap.com/docs/react/advanced/carousel/'
-      />
+      <DocsLink title='Carousel' href='https://mdbootstrap.com/docs/react/advanced/carousel/' />
 
       <SectionContainer header='Slides Only'>
-        <MDBCarousel
-          activeItem={1}
-          length={3}
-          showControls={false}
-          showIndicators={false}
-          className='z-depth-1'
-          slide
-        >
+        <MDBCarousel activeItem={1} length={3} showControls={false} showIndicators={false} className='z-depth-1' slide>
           <MDBCarouselInner>
             <MDBCarouselItem itemId='1'>
               <MDBView>
@@ -61,14 +51,7 @@ const CarouselPage = () => {
       </SectionContainer>
 
       <SectionContainer header='With Captions'>
-        <MDBCarousel
-          activeItem={1}
-          length={4}
-          showControls
-          showIndicators
-          className='z-depth-1'
-          slide
-        >
+        <MDBCarousel activeItem={1} length={4} showControls showIndicators className='z-depth-1' slide>
           <MDBCarouselInner>
             <MDBCarouselItem itemId='1'>
               <MDBView>
@@ -131,12 +114,7 @@ const CarouselPage = () => {
       </SectionContainer>
 
       <SectionContainer header='Fade effect'>
-        <MDBCarousel
-          activeItem={1}
-          length={3}
-          showControls
-          className='z-depth-1'
-        >
+        <MDBCarousel activeItem={1} length={3} showControls className='z-depth-1'>
           <MDBCarouselInner>
             <MDBCarouselItem itemId='1'>
               <MDBView>
@@ -170,13 +148,7 @@ const CarouselPage = () => {
       </SectionContainer>
 
       <SectionContainer header='With Controls'>
-        <MDBCarousel
-          activeItem={1}
-          length={3}
-          showControls
-          showIndicators={false}
-          className='z-depth-1'
-        >
+        <MDBCarousel activeItem={1} length={3} showControls showIndicators={false} className='z-depth-1'>
           <MDBCarouselInner>
             <MDBCarouselItem itemId='1'>
               <MDBView>
@@ -210,13 +182,7 @@ const CarouselPage = () => {
       </SectionContainer>
 
       <SectionContainer header='With Indicators'>
-        <MDBCarousel
-          activeItem={1}
-          length={3}
-          showControls
-          showIndicators
-          className='z-depth-1'
-        >
+        <MDBCarousel activeItem={1} length={3} showControls showIndicators className='z-depth-1'>
           <MDBCarouselInner>
             <MDBCarouselItem itemId='1'>
               <MDBView>
@@ -250,14 +216,7 @@ const CarouselPage = () => {
       </SectionContainer>
 
       <SectionContainer header='Stop when mouse is on the carousel'>
-        <MDBCarousel
-          interval={1500}
-          activeItem={1}
-          length={3}
-          showControls
-          showIndicators
-          className='z-depth-1'
-        >
+        <MDBCarousel interval={1500} activeItem={1} length={3} showControls showIndicators className='z-depth-1'>
           <MDBCarouselInner>
             <MDBCarouselItem itemId='1'>
               <MDBView>

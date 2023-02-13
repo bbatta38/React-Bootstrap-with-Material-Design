@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBEdgeHeader, MDBContainer, MDBRow, MDBCol, MDBJumbotron, MDBIcon, MDBAnimation } from 'mdbreact';
+import { MDBEdgeHeader, MDBContainer, MDBRow, MDBCol, MDBJumbotron, MDBIcon, MDBAnimation } from 'louis-mdbreact';
 import MenuLink from '../components/menuLink';
 
 const TablesNavPage = () => {
@@ -26,7 +26,6 @@ const TablesNavPage = () => {
                   <MenuLink to='/tables/table-responsive' title='Table Responsive' />
                   <MenuLink to='/tables/table-scroll' title='Table Scroll' />
                   <MenuLink to='/tables/table-styles' title='Table Styles' />
-                  
                 </ul>
               </MDBJumbotron>
             </MDBCol>

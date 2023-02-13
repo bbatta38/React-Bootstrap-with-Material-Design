@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  MDBEdgeHeader,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBJumbotron,
-  MDBIcon,
-  MDBAnimation
-} from 'mdbreact';
+import { MDBEdgeHeader, MDBContainer, MDBRow, MDBCol, MDBJumbotron, MDBIcon, MDBAnimation } from 'louis-mdbreact';
 import MenuLink from '../components/menuLink';
 
 const AdvancedNavPage = () => {
@@ -33,11 +25,7 @@ const AdvancedNavPage = () => {
                   <MenuLink to='/advanced/popover' title='Popover' />
                   <MenuLink to='/advanced/scrollbar' title='ScrollBar' />
                   <MenuLink to='/advanced/tooltips' title='Tooltips' />
-                  <MenuLink
-                    to='/advanced/videocarousel'
-                    title='Video Carousel'
-                  />
-                  
+                  <MenuLink to='/advanced/videocarousel' title='Video Carousel' />
                 </ul>
               </MDBJumbotron>
             </MDBCol>

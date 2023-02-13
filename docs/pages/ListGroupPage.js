@@ -1,26 +1,14 @@
 import React from 'react';
-import {
-  MDBListGroup,
-  MDBListGroupItem,
-  MDBRow,
-  MDBBadge,
-  MDBContainer
-} from 'mdbreact';
+import { MDBListGroup, MDBListGroupItem, MDBRow, MDBBadge, MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const ListGroupPage = () => {
   return (
     <MDBContainer>
-      <DocsLink
-        title='List Group'
-        href='https://mdbootstrap.com/docs/react/components/list-group/'
-      />
+      <DocsLink title='List Group' href='https://mdbootstrap.com/docs/react/components/list-group/' />
       <MDBRow>
-        <SectionContainer
-          className='d-flex justify-content-center'
-          header='Basic example'
-        >
+        <SectionContainer className='d-flex justify-content-center' header='Basic example'>
           <MDBListGroup className='my-4 mx-4' style={{ width: '22rem' }}>
             <MDBListGroupItem>Cras justo odio</MDBListGroupItem>
             <MDBListGroupItem>Dapibus ac facilisis in</MDBListGroupItem>
@@ -30,10 +18,7 @@ const ListGroupPage = () => {
           </MDBListGroup>
         </SectionContainer>
 
-        <SectionContainer
-          className='d-flex justify-content-center'
-          header='Labels'
-        >
+        <SectionContainer className='d-flex justify-content-center' header='Labels'>
           <MDBListGroup className='my-4 mx-4' style={{ width: '22rem' }}>
             <MDBListGroupItem className='d-flex justify-content-between align-items-center'>
               Cras justo odio
@@ -56,29 +41,19 @@ const ListGroupPage = () => {
           </MDBListGroup>
         </SectionContainer>
 
-        <SectionContainer
-          className='d-flex justify-content-center'
-          header='Linked items'
-        >
+        <SectionContainer className='d-flex justify-content-center' header='Linked items'>
           <MDBListGroup className='my-4 mx-4' style={{ width: '22rem' }}>
             <MDBListGroupItem href='#' active>
               Cras justo odio
             </MDBListGroupItem>
-            <MDBListGroupItem href='#'>
-              Dapibus ac facilisis in
-            </MDBListGroupItem>
+            <MDBListGroupItem href='#'>Dapibus ac facilisis in</MDBListGroupItem>
             <MDBListGroupItem href='#'>Morbi leo risus</MDBListGroupItem>
-            <MDBListGroupItem href='#'>
-              Porta ac consectetur ac
-            </MDBListGroupItem>
+            <MDBListGroupItem href='#'>Porta ac consectetur ac</MDBListGroupItem>
             <MDBListGroupItem href='#'>Vestibulum at eros</MDBListGroupItem>
           </MDBListGroup>
         </SectionContainer>
 
-        <SectionContainer
-          className='d-flex justify-content-center'
-          header='Links and buttons'
-        >
+        <SectionContainer className='d-flex justify-content-center' header='Links and buttons'>
           <MDBListGroup className='my-4 mx-4' style={{ width: '22rem' }}>
             <MDBListGroupItem href='#' active>
               Cras justo odio
@@ -98,31 +73,19 @@ const ListGroupPage = () => {
           </MDBListGroup>
         </SectionContainer>
 
-        <SectionContainer
-          className='d-flex justify-content-center'
-          header='Contextual classes'
-        >
+        <SectionContainer className='d-flex justify-content-center' header='Contextual classes'>
           <MDBListGroup className='my-4 mx-4' style={{ width: '22rem' }}>
             <MDBListGroupItem color='primary'>Cras justo odio</MDBListGroupItem>
-            <MDBListGroupItem color='secondary'>
-              Dapibus ac facilisis in
-            </MDBListGroupItem>
+            <MDBListGroupItem color='secondary'>Dapibus ac facilisis in</MDBListGroupItem>
             <MDBListGroupItem color='danger'>Morbi leo risus</MDBListGroupItem>
-            <MDBListGroupItem color='warning'>
-              Porta ac consectetur ac
-            </MDBListGroupItem>
+            <MDBListGroupItem color='warning'>Porta ac consectetur ac</MDBListGroupItem>
             <MDBListGroupItem color='info'>Vestibulum at eros</MDBListGroupItem>
-            <MDBListGroupItem color='light'>
-              Vestibulum at eros
-            </MDBListGroupItem>
+            <MDBListGroupItem color='light'>Vestibulum at eros</MDBListGroupItem>
             <MDBListGroupItem color='dark'>Vestibulum at eros</MDBListGroupItem>
           </MDBListGroup>
         </SectionContainer>
 
-        <SectionContainer
-          className='d-flex justify-content-center'
-          header='Custom content'
-        >
+        <SectionContainer className='d-flex justify-content-center' header='Custom content'>
           <MDBListGroup className='my-4 mx-4' style={{ width: '22rem' }}>
             <MDBListGroupItem active href='#'>
               <div className='d-flex w-100 justify-content-between'>
@@ -130,8 +93,7 @@ const ListGroupPage = () => {
                 <small>3 days ago</small>
               </div>
               <p className='mb-1'>
-                Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                diam eget risus varius blandit.
+                Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
               </p>
               <small>Donec id elit non mi porta.</small>
             </MDBListGroupItem>
@@ -141,8 +103,7 @@ const ListGroupPage = () => {
                 <small className='text-muted'>3 days ago</small>
               </div>
               <p className='mb-1'>
-                Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                diam eget risus varius blandit.
+                Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
               </p>
               <small className='text-muted'>Donec id elit non mi porta.</small>
             </MDBListGroupItem>
@@ -152,8 +113,7 @@ const ListGroupPage = () => {
                 <small className='text-muted'>3 days ago</small>
               </div>
               <p className='mb-1'>
-                Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                diam eget risus varius blandit.
+                Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
               </p>
               <small className='text-muted'>Donec id elit non mi porta.</small>
             </MDBListGroupItem>

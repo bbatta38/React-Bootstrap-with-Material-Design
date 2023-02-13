@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  MDBDataTable,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBBadge
-} from 'mdbreact';
+import { MDBDataTable, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBBadge } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
@@ -33,12 +25,7 @@ class DatatableApiPage extends React.Component {
         rows = rows.map((row, key) => ({
           ...row,
           id: (
-            <MDBBadge
-              color='info'
-              className='w-100'
-              searchvalue={key}
-              key={key}
-            >
+            <MDBBadge color='info' className='w-100' searchvalue={key} key={key}>
               {key}
             </MDBBadge>
           )
@@ -56,21 +43,13 @@ class DatatableApiPage extends React.Component {
     const { data } = this.state;
     return (
       <MDBContainer className='mt-3'>
-        <DocsLink
-          title='Datatable'
-          href='https://mdbootstrap.com/docs/react/tables/datatables/'
-        />
+        <DocsLink title='Datatable' href='https://mdbootstrap.com/docs/react/tables/datatables/' />
         <MDBRow className='py-3'>
           <MDBCol md='12'>
             <SectionContainer header='Datatable with data from API' noBorder>
               <MDBCard>
                 <MDBCardBody>
-                  <MDBDataTable
-                    striped
-                    bordered
-                    hover
-                    data='https://my-json-server.typicode.com/Rotarepmi/exjson/db'
-                  />
+                  <MDBDataTable striped bordered hover data='https://my-json-server.typicode.com/Rotarepmi/exjson/db' />
                 </MDBCardBody>
               </MDBCard>
             </SectionContainer>
@@ -79,10 +58,7 @@ class DatatableApiPage extends React.Component {
 
         <MDBRow className='py-3'>
           <MDBCol md='12'>
-            <SectionContainer
-              header='With scrollX and scrollY properties'
-              noBorder
-            >
+            <SectionContainer header='With scrollX and scrollY properties' noBorder>
               <MDBCard>
                 <MDBCardBody>
                   <MDBDataTable
@@ -102,19 +78,10 @@ class DatatableApiPage extends React.Component {
 
         <MDBRow className='py-3'>
           <MDBCol md='12'>
-            <SectionContainer
-              header='Datatable with data from API + custom data'
-              noBorder
-            >
+            <SectionContainer header='Datatable with data from API + custom data' noBorder>
               <MDBCard>
                 <MDBCardBody>
-                  <MDBDataTable
-                    striped
-                    bordered
-                    hover
-                    data={data}
-                    sortRows={['id']}
-                  />
+                  <MDBDataTable striped bordered hover data={data} sortRows={['id']} />
                 </MDBCardBody>
               </MDBCard>
             </SectionContainer>

@@ -1,15 +1,12 @@
 import React from 'react';
-import { MDBBadge, MDBContainer, MDBIcon } from 'mdbreact';
+import { MDBBadge, MDBContainer, MDBIcon } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const BadgePage = props => {
   return (
     <MDBContainer>
-      <DocsLink
-        title='Badges'
-        href='https://mdbootstrap.com/docs/react/components/badges/'
-      />
+      <DocsLink title='Badges' href='https://mdbootstrap.com/docs/react/components/badges/' />
 
       <SectionContainer
         header={
@@ -95,7 +92,6 @@ const BadgePage = props => {
           </tbody>
         </table>
       </SectionContainer>
-
 
       <SectionContainer header='Customization' className='text-center'>
         <h5>

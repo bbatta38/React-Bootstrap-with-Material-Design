@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBContainer } from 'mdbreact';
+import { MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 import './ScrollbarPage.css';
@@ -12,22 +12,13 @@ const ScrollBarPage = () => {
 
       <SectionContainer header='Default' className='py-5'>
         <div className='scrollbar mx-auto' style={scrollContainerStyle}>
-          <img
-            alt=''
-            src='https://mdbootstrap.com/img/Photos/Others/img%20(51).jpg'
-          />
+          <img alt='' src='https://mdbootstrap.com/img/Photos/Others/img%20(51).jpg' />
         </div>
       </SectionContainer>
 
       <SectionContainer header='Primary' className='py-5'>
-        <div
-          className='scrollbar scrollbar-primary m-auto'
-          style={scrollContainerStyle}
-        >
-          <img
-            alt=''
-            src='https://mdbootstrap.com/img/Photos/Others/img%20(51).jpg'
-          />
+        <div className='scrollbar scrollbar-primary m-auto' style={scrollContainerStyle}>
+          <img alt='' src='https://mdbootstrap.com/img/Photos/Others/img%20(51).jpg' />
         </div>
       </SectionContainer>
     </MDBContainer>
