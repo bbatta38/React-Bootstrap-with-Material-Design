@@ -1,4 +1,4 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 // import variables from '../../dist/scss/core/_colors.scss';
 
 // const { danger, warning, success, primary, info, secondary, light, dark } = variables;
@@ -282,7 +282,7 @@ const themeColorsOpacity = {
 export const takeThemeColor = theme => themeColors[theme];
 export const takeThemeColorOpacity = theme => themeColorsOpacity[theme];
 
-export const takeAcutalDate = date => moment(date || new Date());
+export const takeAcutalDate = date => dayjs(date || new Date());
 
 export const testData = {
   columns: [
