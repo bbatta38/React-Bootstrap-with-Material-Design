@@ -4,7 +4,6 @@ import React from 'react';
 
 const TableBody = props => {
   const { children, color, columns, rows, textWhite, ...attributes } = props;
-
   const classes = classNames(color, {
     'text-white': textWhite
   });
@@ -19,21 +18,23 @@ const TableBody = props => {
       if (row.message) {
         return (
           key === 0 && (
-            <td key={key} colSpan={row.colspan}>
+            <td data-th={columns[key]?.label} key={key} colSpan={row.colspan}>
               {row.message}
             </td>
           )
         );
       } else {
         return (
-          (array[key + 1] !== 'colspan' && row[field] !== null && <td key={key}>{row[field]}</td>) || (
-            <td key={key}></td>
-          )
+          (array[key + 1] !== 'colspan' && row[field] !== null && (
+            <td data-th={columns[key]?.label} key={key}>
+              {row[field]}
+            </td>
+          )) || <td data-th={columns[key]?.label} key={key}></td>
         );
       }
     }
     return (
-      <td key={key} colSpan={row.colspan}>
+      <td data-th={columns[key]?.label} key={key} colSpan={row.colspan}>
         {row[array[key - 1]]}
       </td>
     );
