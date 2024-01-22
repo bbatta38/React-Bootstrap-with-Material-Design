@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { NavLink as NavLinkRouter } from 'react-router-dom';
@@ -6,7 +6,8 @@ import Waves from '../../Waves';
 import { MDBLink } from '../../Link';
 
 const NavLink = props => {
-  const [cursorPos, setCursorPos] = useState({});
+  const cursorPos = {};
+  // const [cursorPos, setCursorPos] = useState({});
   const { children, className, disabled, active, to, link, ...attributes } = props;
   const classes = classNames('nav-link', disabled ? 'disabled' : 'Ripple-parent', active && 'active', className);
 
@@ -14,12 +15,12 @@ const NavLink = props => {
     if (!disabled) {
       e.stopPropagation();
       // Waves - Get Cursor Position
-      const cursorPos = {
-        top: e.clientY,
-        left: e.clientX,
-        time: Date.now()
-      };
-      setCursorPos(cursorPos);
+      // const cursorPos = {
+      //   top: e.clientY,
+      //   left: e.clientX,
+      //   time: Date.now()
+      // };
+      // setCursorPos(cursorPos);
     }
   };
 

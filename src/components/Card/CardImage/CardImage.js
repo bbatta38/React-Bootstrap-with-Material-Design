@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Waves from '../../Waves';
@@ -6,16 +6,17 @@ import Mask from '../../Mask';
 import View from '../../View';
 
 const CardImage = props => {
-  const [cursorPos, setCursorPos] = useState({});
+  const cursorPos = {};
+  // const [cursorPos, setCursorPos] = useState({});
 
   const handleClick = e => {
     // Get Cursor Position
-    const cursorPos = {
-      top: e.clientY,
-      left: e.clientX,
-      time: Date.now()
-    };
-    setCursorPos(cursorPos);
+    // const cursorPos = {
+    //   top: e.clientY,
+    //   left: e.clientX,
+    //   time: Date.now()
+    // };
+    // setCursorPos(cursorPos);
   };
 
   const { cascade, className, hover, overlay, src, tag, top, waves, zoom, ...attributes } = props;

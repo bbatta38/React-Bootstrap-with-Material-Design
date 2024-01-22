@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link as LinkRouter } from 'react-router-dom';
 import Waves from '../Waves';
 
 const Link = props => {
-  const [cursorPos, setCursorPos] = useState({});
+  const cursorPos = {};
+  // const [cursorPos, setCursorPos] = useState({});
   const { active, children, className, disabled, link, to, ...attributes } = props;
   const classes = classNames('nav-link', disabled ? 'disabled' : 'Ripple-parent', active && 'active', className);
 
   const handleClick = e => {
     if (!disabled) {
-      e.stopPropagation();
-      const cursorPos = {
-        top: e.clientY,
-        left: e.clientX,
-        time: Date.now()
-      };
-      setCursorPos(cursorPos);
+      // e.stopPropagation();
+      // const cursorPos = {
+      //   top: e.clientY,
+      //   left: e.clientX,
+      //   time: Date.now()
+      // };
+      // setCursorPos(cursorPos);
     }
   };
 

@@ -4,16 +4,17 @@ import classNames from 'classnames';
 import Waves from '../Waves';
 
 const FormInline = props => {
-  const [cursorPos, setCursorPos] = useState({});
+  const cursorPos = {};
+  // const [cursorPos, setCursorPos] = useState({});
 
   const handleClick = e => {
     // Get Cursor Position
-    const cursorPos = {
-      top: e.clientY,
-      left: e.clientX,
-      time: Date.now()
-    };
-    setCursorPos(cursorPos);
+    // const cursorPos = {
+    //   top: e.clientY,
+    //   left: e.clientX,
+    //   time: Date.now()
+    // };
+    // setCursorPos(cursorPos);
   };
 
   const { className, waves, children, ...attributes } = props;
