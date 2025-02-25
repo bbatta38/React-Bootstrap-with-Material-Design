@@ -11,7 +11,7 @@ import {
   MDBModal,
   MDBModalBody,
   MDBModalFooter
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

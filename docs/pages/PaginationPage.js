@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBPagination, MDBPageItem, MDBPageNav, MDBContainer, MDBCol, MDBRow } from 'mdbreact';
+import { MDBPagination, MDBPageItem, MDBPageNav, MDBContainer, MDBCol, MDBRow } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

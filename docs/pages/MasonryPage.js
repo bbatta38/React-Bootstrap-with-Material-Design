@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MDBContainer } from 'mdbreact';
+import { MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 import './Masonry.css';

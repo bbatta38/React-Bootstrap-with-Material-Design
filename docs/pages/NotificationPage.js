@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBNotification, MDBContainer } from 'mdbreact';
+import { MDBNotification, MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

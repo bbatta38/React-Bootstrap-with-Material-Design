@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBListGroup, MDBListGroupItem, MDBRow, MDBBadge, MDBContainer } from 'mdbreact';
+import { MDBListGroup, MDBListGroupItem, MDBRow, MDBBadge, MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDBContainer, MDBTreeview, MDBTreeviewList, MDBTreeviewItem, MDBCol, MDBRow } from 'mdbreact';
+import { MDBContainer, MDBTreeview, MDBTreeviewList, MDBTreeviewItem, MDBCol, MDBRow } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

@@ -10,6 +10,11 @@ class DropdownToggle extends React.Component {
     color: 'secondary'
   };
 
+  static contextTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    toggle: PropTypes.func.isRequired
+  };
+
   onClick = e => {
     const { disabled, nav, tag, onClick } = this.props;
     const { toggle } = this.context;
@@ -83,11 +88,6 @@ DropdownToggle.propTypes = {
   nav: PropTypes.bool,
   onClick: PropTypes.func,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-DropdownToggle.contextTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired
 };
 
 export default DropdownToggle;

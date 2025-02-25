@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBIcon, MDBNavLink } from 'mdbreact';
+import { MDBIcon, MDBNavLink } from 'louis-mdbreact';
 
 const NavLink = ({ to, title }) => {
   return (

@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 class TabPane extends React.Component {
+  static contextTypes = {
+    activeItemId: PropTypes.any
+  };
+
   render() {
     const { className, tabId, ...attributes } = this.props;
     const { activeItemId } = this.context;
@@ -10,10 +14,6 @@ class TabPane extends React.Component {
     return <div data-test='tab-pane' {...attributes} className={classes} role='tabpanel' />;
   }
 }
-
-TabPane.contextTypes = {
-  activeItemId: PropTypes.any
-};
 
 TabPane.propTypes = {
   className: PropTypes.string,

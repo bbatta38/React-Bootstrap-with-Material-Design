@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBProgress, MDBContainer } from 'mdbreact';
+import { MDBProgress, MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

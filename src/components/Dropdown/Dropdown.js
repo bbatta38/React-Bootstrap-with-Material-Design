@@ -10,6 +10,14 @@ class Dropdown extends Component {
     isOpen: false
   };
 
+  static childContextTypes = {
+    dropleft: PropTypes.bool.isRequired,
+    dropright: PropTypes.bool.isRequired,
+    dropup: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+    toggle: PropTypes.func.isRequired
+  };
+
   getChildContext() {
     const { isOpen } = this.state;
     const { dropup, dropright, dropleft } = this.props;
@@ -190,14 +198,6 @@ Dropdown.propTypes = {
   size: PropTypes.string,
   tag: PropTypes.string,
   toggle: PropTypes.func
-};
-
-Dropdown.childContextTypes = {
-  dropleft: PropTypes.bool.isRequired,
-  dropright: PropTypes.bool.isRequired,
-  dropup: PropTypes.bool.isRequired,
-  isOpen: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired
 };
 
 export default Dropdown;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import { Fa, MDBBtn, MDBPopoverBody, MDBPopoverHeader, MDBTooltip } from 'mdbreact';
+import { Fa, MDBBtn, MDBPopoverBody, MDBPopoverHeader, MDBTooltip } from 'louis-mdbreact';
 import PropTypes from 'prop-types';
 
 const Rating = props => {
@@ -36,7 +36,7 @@ const Rating = props => {
     ...commonAttributes
   } = props;
 
-  const [data, setData] = useState(PropsData);
+  const [data] = useState(PropsData);
   const [hovered, setHovered] = useState(null);
   const [choosed, setChoosed] = useState({
     title: '',
@@ -55,11 +55,6 @@ const Rating = props => {
     window.addEventListener('click', onDocumentClick);
     return () => window.removeEventListener('click', onDocumentClick);
   }, []);
-
-  useEffect(() => {
-    setData(PropsData);
-    // eslint-disable-next-line react/destructuring-assignment
-  }, [PropsData]);
 
   useEffect(() => {
     const choosedIndex = data.findIndex(item => item.choosed);

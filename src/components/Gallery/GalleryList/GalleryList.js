@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { MDBBox } from 'mdbreact';
+import { MDBBox } from 'louis-mdbreact';
 import './GalleryList.css';
 import { debounce } from '../../utils';
 

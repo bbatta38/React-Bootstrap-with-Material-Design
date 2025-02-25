@@ -10,7 +10,7 @@ import {
   MDBNavLink,
   MDBTooltip,
   MDBIcon
-} from 'mdbreact';
+} from 'louis-mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import Routes from './Routes';

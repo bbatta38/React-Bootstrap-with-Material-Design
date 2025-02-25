@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDBInput, MDBInputSelect, MDBFormInline, MDBBtn, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
+import { MDBInput, MDBInputSelect, MDBFormInline, MDBBtn, MDBContainer, MDBRow, MDBCol } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

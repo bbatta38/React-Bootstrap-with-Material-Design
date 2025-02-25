@@ -27,6 +27,12 @@ class CarouselItem extends Component {
     tag: 'div'
   };
 
+  static contextTypes = {
+    activeItem: PropTypes.any,
+    length: PropTypes.any,
+    slide: PropTypes.any
+  };
+
   render() {
     let { active, children, className, itemId, tag: Tag, ...attributes } = this.props;
 
@@ -71,12 +77,6 @@ CarouselItem.propTypes = {
   className: PropTypes.string,
   itemId: PropTypes.any,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-CarouselItem.contextTypes = {
-  activeItem: PropTypes.any,
-  length: PropTypes.any,
-  slide: PropTypes.any
 };
 
 export default CarouselItem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBContainer } from 'mdbreact';
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 
 const CarouselPage = () => {

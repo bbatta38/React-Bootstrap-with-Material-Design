@@ -9,6 +9,10 @@ class DropdownItem extends Component {
     toggle: true
   };
 
+  static contextTypes = {
+    toggle: PropTypes.func
+  };
+
   onClick = e => {
     const { disabled, header, divider, onClick, toggle } = this.props;
 
@@ -89,10 +93,6 @@ DropdownItem.propTypes = {
   onClick: PropTypes.func,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   toggle: PropTypes.bool
-};
-
-DropdownItem.contextTypes = {
-  toggle: PropTypes.func
 };
 
 export default DropdownItem;

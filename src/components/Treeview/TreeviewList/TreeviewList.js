@@ -94,9 +94,5 @@ TreeviewList.propTypes = {
   title: PropTypes.any
 };
 
-TreeviewList.contextTypes = {
-  theme: PropTypes.string
-};
-
 export default TreeviewList;
 export { TreeviewList as MDBTreeviewList };

@@ -27,6 +27,12 @@ class Carousel extends Component {
     tag: 'div'
   };
 
+  static childContextTypes = {
+    activeItem: PropTypes.any,
+    length: PropTypes.any,
+    slide: PropTypes.any
+  };
+
   componentDidMount() {
     const { interval, thumbnails, length } = this.props;
     if (interval === false) {
@@ -272,12 +278,6 @@ Carousel.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   testimonial: PropTypes.bool,
   thumbnails: PropTypes.bool
-};
-
-Carousel.childContextTypes = {
-  activeItem: PropTypes.any,
-  length: PropTypes.any,
-  slide: PropTypes.any
 };
 
 export default Carousel;

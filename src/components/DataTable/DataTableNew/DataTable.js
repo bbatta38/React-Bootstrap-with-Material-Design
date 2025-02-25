@@ -7,7 +7,7 @@ import DataTableEntries from './DataTableEntries';
 import DataTableSearch from './DataTableSearch';
 import DataTableInfo from './DataTableInfo';
 import DataTablePagination from './DataTablePagination';
-import { MDBSelect, MDBInput } from 'mdbreact';
+import { MDBSelect, MDBInput } from 'louis-mdbreact';
 
 import './scss/_datatables2.scss';
 import './scss/_datatables-select2.scss';

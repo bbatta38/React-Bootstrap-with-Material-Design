@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MDBPopover, MDBBtn, MDBPopoverBody, MDBPopoverHeader, MDBContainer } from 'mdbreact';
+import { MDBPopover, MDBBtn, MDBPopoverBody, MDBPopoverHeader, MDBContainer } from 'louis-mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

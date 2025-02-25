@@ -12,7 +12,8 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'temp'),
     filename: 'main.js',
-    publicPath: '/'
+    publicPath: '/',
+    hashFunction: 'sha512'
   },
   resolve: {
     alias: {

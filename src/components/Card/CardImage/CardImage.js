@@ -1,39 +1,55 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Waves from '../../Waves';
+import Mask from '../../Mask';
+import View from '../../View';
 
 const CardImage = props => {
+  const cursorPos = {};
+  // const [cursorPos, setCursorPos] = useState({});
+
+  const handleClick = e => {
+    // Get Cursor Position
+    // const cursorPos = {
+    //   top: e.clientY,
+    //   left: e.clientX,
+    //   time: Date.now()
+    // };
+    // setCursorPos(cursorPos);
+  };
+
   const {
     cascade = false,
-    children,
     className,
     hover = false,
     overlay = 'white-slight',
     src,
-    tag: Tag = 'img',
+    tag = 'img',
     top,
     waves = true,
     zoom = false,
     ...attributes
   } = props;
 
-  const classes = classNames(
-    'card-img',
-    top && 'card-img-top',
-    cascade && 'view view-cascade overlay',
-    hover && 'overlay',
-    zoom && 'zoom',
-    waves && 'Ripple-parent',
-    className
-  );
+  const classes = classNames(top && 'card-img-top', className);
 
-  const innerContent = overlay ? <div className={`mask ${overlay}`}>{children}</div> : children;
+  const Tag = tag;
 
-  return (
-    <Tag {...attributes} className={classes} src={src}>
-      {innerContent}
-    </Tag>
-  );
+  const innerContent = <Tag data-test='card-image' src={src} {...attributes} className={classes} />;
+
+  if (src) {
+    return (
+      <View zoom={zoom} hover={hover} cascade={cascade}>
+        <div className='Ripple-parent' onMouseDown={handleClick} style={{ touchAction: 'unset' }}>
+          {innerContent}
+          <Mask overlay={overlay} />
+          {waves && <Waves cursorPos={cursorPos} />}
+        </div>
+      </View>
+    );
+  }
+  return <div>{innerContent}</div>;
 };
 
 CardImage.propTypes = {

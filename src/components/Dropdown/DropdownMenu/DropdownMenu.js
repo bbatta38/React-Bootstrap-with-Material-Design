@@ -15,6 +15,17 @@ class DropdownMenu extends Component {
     color: false
   };
 
+  static contextTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    dropup: PropTypes.bool.isRequired,
+    dropright: PropTypes.bool.isRequired,
+    dropleft: PropTypes.bool.isRequired,
+    color: PropTypes.oneOfType([
+      PropTypes.oneOf(['primary', 'default', 'secondary', 'success', 'dark', 'danger', 'info', 'warning', 'ins']),
+      PropTypes.bool
+    ])
+  };
+
   render() {
     const { basic, children, className, color, flip, modifiers, right, tag, ...attrs } = this.props;
 
@@ -79,17 +90,6 @@ DropdownMenu.propTypes = {
   modifiers: PropTypes.object,
   right: PropTypes.bool,
   tag: PropTypes.string
-};
-
-DropdownMenu.contextTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  dropup: PropTypes.bool.isRequired,
-  dropright: PropTypes.bool.isRequired,
-  dropleft: PropTypes.bool.isRequired,
-  color: PropTypes.oneOfType([
-    PropTypes.oneOf(['primary', 'default', 'secondary', 'success', 'dark', 'danger', 'info', 'warning', 'ins']),
-    PropTypes.bool
-  ])
 };
 
 export default DropdownMenu;

@@ -30,5 +30,6 @@ package-lock.json
 
 .history
 .yarn
+.yarnrc.yml
 
 //lint-staged

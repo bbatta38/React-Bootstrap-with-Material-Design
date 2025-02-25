@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { MDBInput } from 'mdbreact';
+import { MDBInput } from 'louis-mdbreact';
 
 const DataTableInput = ({ value, onChange, label, barReverse, materialSearch }) => (
   <div
