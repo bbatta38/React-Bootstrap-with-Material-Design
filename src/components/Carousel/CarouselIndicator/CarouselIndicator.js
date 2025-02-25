@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const CarouselIndicator = props => {
-  const { active, alt, children, className, img, ...attributes } = props;
+  const { active, alt = 'Carousel thumnail', children, className = '', img = '', ...attributes } = props;
 
   const classes = classNames(active && 'active', className);
 
@@ -21,12 +21,6 @@ CarouselIndicator.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   img: PropTypes.string
-};
-
-CarouselIndicator.defaultProps = {
-  alt: 'Carousel thumbnail',
-  className: '',
-  img: ''
 };
 
 export default CarouselIndicator;

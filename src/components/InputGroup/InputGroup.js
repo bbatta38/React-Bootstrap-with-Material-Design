@@ -21,9 +21,9 @@ const InputGroup = ({
   prepend,
   prependClassName,
   size,
-  tag: Tag,
+  tag: Tag = 'div',
   textClassName,
-  type,
+  type = 'text',
   value,
   valueDefault,
   getValue,
@@ -112,11 +112,6 @@ InputGroup.propTypes = {
   type: PropTypes.string,
   value: PropTypes.string,
   valueDefault: PropTypes.string
-};
-
-InputGroup.defaultProps = {
-  tag: 'div',
-  type: 'text'
 };
 
 export default InputGroup;

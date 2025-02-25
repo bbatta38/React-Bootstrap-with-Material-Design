@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBEdgeHeader, MDBContainer, MDBRow, MDBCol, MDBJumbotron, MDBIcon, MDBAnimation } from 'louis-mdbreact';
+import { MDBEdgeHeader, MDBContainer, MDBRow, MDBCol, MDBJumbotron, MDBIcon, MDBAnimation } from 'mdbreact';
 import MenuLink from '../components/menuLink';
 
 const ModalsNavPage = () => {

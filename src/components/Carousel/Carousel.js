@@ -18,6 +18,15 @@ class Carousel extends Component {
 
   carouselRef = React.createRef();
 
+  static defaultProps = {
+    interval: 6000,
+    mobileGesture: true,
+    onHoverStop: true,
+    showControls: true,
+    showIndicators: true,
+    tag: 'div'
+  };
+
   componentDidMount() {
     const { interval, thumbnails, length } = this.props;
     if (interval === false) {
@@ -263,15 +272,6 @@ Carousel.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   testimonial: PropTypes.bool,
   thumbnails: PropTypes.bool
-};
-
-Carousel.defaultProps = {
-  interval: 6000,
-  mobileGesture: true,
-  onHoverStop: true,
-  showControls: true,
-  showIndicators: true,
-  tag: 'div'
 };
 
 Carousel.childContextTypes = {

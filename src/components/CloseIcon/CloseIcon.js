@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const MDBCloseIcon = ({ onClick, className, ariaLabel, ...props }) => {
+export const MDBCloseIcon = ({ onClick, className, ariaLabel = 'Close', ...props }) => {
   const onClickHandler = e => {
     onClick && onClick(e);
   };
@@ -19,10 +19,6 @@ export const MDBCloseIcon = ({ onClick, className, ariaLabel, ...props }) => {
       <span aria-hidden='true'>×</span>
     </button>
   );
-};
-
-MDBCloseIcon.defaultProps = {
-  ariaLabel: 'Close'
 };
 
 MDBCloseIcon.propTypes = {

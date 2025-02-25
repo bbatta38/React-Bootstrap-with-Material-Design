@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const ListGroup = props => {
-  const { children, className, tag: Tag, ...attributes } = props;
+  const { children, className, tag: Tag = 'ul', ...attributes } = props;
 
   const classes = classNames('list-group', className);
 
@@ -18,10 +18,6 @@ ListGroup.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-ListGroup.defaultProps = {
-  tag: 'ul'
 };
 
 export default ListGroup;

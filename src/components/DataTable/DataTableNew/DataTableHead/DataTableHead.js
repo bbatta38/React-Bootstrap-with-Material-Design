@@ -3,7 +3,16 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const DataTableHead = props => {
-  const { color, columns, handleSort, scrollX, scrollY, sortable, sorted, textWhite } = props;
+  const {
+    color,
+    columns,
+    handleSort,
+    scrollX = false,
+    scrollY = false,
+    sortable = true,
+    sorted,
+    textWhite = false
+  } = props;
 
   const theadClasses = classNames(
     'mdb-dataTable-head',
@@ -57,13 +66,6 @@ DataTableHead.propTypes = {
   scrollY: PropTypes.bool,
   sortable: PropTypes.bool,
   textWhite: PropTypes.bool
-};
-
-DataTableHead.defaultProps = {
-  scrollX: false,
-  scrollY: false,
-  sortable: true,
-  textWhite: false
 };
 
 export default DataTableHead;

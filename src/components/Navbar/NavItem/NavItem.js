@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const NavItem = props => {
-  const { children, className, active, text, tag: Tag, ...attributes } = props;
+  const { children, className, active, text, tag: Tag = 'li', ...attributes } = props;
 
   const classes = classNames('nav-item', active && 'active', text && 'navbar-text', className);
 
@@ -19,10 +19,6 @@ NavItem.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-NavItem.defaultProps = {
-  tag: 'li'
 };
 
 export default NavItem;

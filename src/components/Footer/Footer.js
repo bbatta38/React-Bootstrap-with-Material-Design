@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Footer = props => {
-  const { color, children, className, tag: Tag, ...attributes } = props;
+  const { color, children, className, tag: Tag = 'footer', ...attributes } = props;
 
   const classes = classNames('page-footer', color && color, className);
 
@@ -19,10 +19,6 @@ Footer.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-Footer.defaultProps = {
-  tag: 'footer'
 };
 
 export default Footer;

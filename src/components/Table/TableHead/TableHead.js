@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const TableHead = props => {
-  const { children, color, columns, textWhite, ...attributes } = props;
+  const { children, color, columns, textWhite = false, ...attributes } = props;
 
   const isTheadColor = color === 'dark' || color === 'light';
 
@@ -34,10 +34,6 @@ TableHead.propTypes = {
   color: PropTypes.string,
   columns: PropTypes.arrayOf(PropTypes.object),
   textWhite: PropTypes.bool
-};
-
-TableHead.defaultProps = {
-  textWhite: false
 };
 
 export default TableHead;

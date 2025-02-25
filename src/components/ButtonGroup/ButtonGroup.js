@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './ButtonGroup.css';
 
-const ButtonGroup = ({ className, size, vertical, children, ...attributes }) => {
+const ButtonGroup = ({ className, size, vertical, children, role = 'group', ...attributes }) => {
   const classes = classNames(
     className,
     size ? `btn-group-${size}` : false,
@@ -24,10 +24,6 @@ ButtonGroup.propTypes = {
   role: PropTypes.string,
   size: PropTypes.string,
   vertical: PropTypes.bool
-};
-
-ButtonGroup.defaultProps = {
-  role: 'group'
 };
 
 export default ButtonGroup;

@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBTabPane,
-  MDBTabContent,
-  MDBNav,
-  MDBNavItem,
-  MDBNavLink
-} from 'louis-mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from 'mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

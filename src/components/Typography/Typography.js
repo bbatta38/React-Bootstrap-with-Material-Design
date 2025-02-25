@@ -4,6 +4,14 @@ import classNames from 'classnames';
 import './Typography.css';
 
 class Typography extends React.Component {
+  static defaultProps = {
+    abbr: false,
+    blockquote: false,
+    listInLine: false,
+    listUnStyled: false,
+    noteColor: 'primary',
+    tag: 'p'
+  };
   render() {
     const {
       className,
@@ -77,15 +85,6 @@ Typography.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   text: PropTypes.string,
   variant: PropTypes.string
-};
-
-Typography.defaultProps = {
-  abbr: false,
-  blockquote: false,
-  listInLine: false,
-  listUnStyled: false,
-  noteColor: 'primary',
-  tag: 'p'
 };
 
 export default Typography;

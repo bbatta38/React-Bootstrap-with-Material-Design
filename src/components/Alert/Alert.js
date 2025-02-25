@@ -19,7 +19,7 @@ const Alert = props => {
     return props.onClosed && props.onClosed();
   };
 
-  const { className, tag: Tag, color, children, dismiss } = props;
+  const { className, tag: Tag = 'div', color = 'primary', children, dismiss } = props;
 
   const alertClasses = classNames('alert', color && `alert-${color}`, className);
 
@@ -51,11 +51,6 @@ const Alert = props => {
   }
 
   return alertComponent;
-};
-
-Alert.defaultProps = {
-  color: 'primary',
-  tag: 'div'
 };
 
 Alert.propTypes = {

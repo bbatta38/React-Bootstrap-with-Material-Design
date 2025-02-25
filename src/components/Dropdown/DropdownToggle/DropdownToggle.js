@@ -5,6 +5,11 @@ import { Reference } from 'react-popper';
 import Button from '../../Button';
 
 class DropdownToggle extends React.Component {
+  static defaultProps = {
+    'aria-haspopup': true,
+    color: 'secondary'
+  };
+
   onClick = e => {
     const { disabled, nav, tag, onClick } = this.props;
     const { toggle } = this.context;
@@ -78,11 +83,6 @@ DropdownToggle.propTypes = {
   nav: PropTypes.bool,
   onClick: PropTypes.func,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-DropdownToggle.defaultProps = {
-  'aria-haspopup': true,
-  color: 'secondary'
 };
 
 DropdownToggle.contextTypes = {

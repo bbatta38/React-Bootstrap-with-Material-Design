@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const CarouselInner = props => {
-  const { active, children, childrenCount, className, tag: Tag, ...attributes } = props;
+  const { active, children, childrenCount, className, tag: Tag = 'div', ...attributes } = props;
 
   const classes = classNames('carousel-inner', active ? 'active' : '', className);
   return (
@@ -18,10 +18,6 @@ CarouselInner.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-CarouselInner.defaultProps = {
-  tag: 'div'
 };
 
 export default CarouselInner;

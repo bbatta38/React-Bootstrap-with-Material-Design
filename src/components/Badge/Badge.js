@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Badge = props => {
-  const { tag: Tag, className, children, color, pill, ...attributes } = props;
+  const { tag: Tag = 'span', className, children, color = 'default', pill = false, ...attributes } = props;
 
   const classes = classNames('badge', color, `badge-${color}`, pill ? 'badge-pill' : false, className);
   return (
@@ -19,11 +19,6 @@ Badge.propTypes = {
   color: PropTypes.string,
   pill: PropTypes.bool,
   tag: PropTypes.string
-};
-Badge.defaultProps = {
-  tag: 'span',
-  color: 'default',
-  pill: false
 };
 
 export default Badge;

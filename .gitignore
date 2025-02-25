@@ -29,6 +29,6 @@ package-lock.json
 *.tgz
 
 .history
-
+.yarn
 
 //lint-staged

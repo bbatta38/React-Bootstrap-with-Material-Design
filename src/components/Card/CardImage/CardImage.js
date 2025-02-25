@@ -1,44 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Waves from '../../Waves';
-import Mask from '../../Mask';
-import View from '../../View';
 
 const CardImage = props => {
-  const cursorPos = {};
-  // const [cursorPos, setCursorPos] = useState({});
+  const {
+    cascade = false,
+    children,
+    className,
+    hover = false,
+    overlay = 'white-slight',
+    src,
+    tag: Tag = 'img',
+    top,
+    waves = true,
+    zoom = false,
+    ...attributes
+  } = props;
 
-  const handleClick = e => {
-    // Get Cursor Position
-    // const cursorPos = {
-    //   top: e.clientY,
-    //   left: e.clientX,
-    //   time: Date.now()
-    // };
-    // setCursorPos(cursorPos);
-  };
+  const classes = classNames(
+    'card-img',
+    top && 'card-img-top',
+    cascade && 'view view-cascade overlay',
+    hover && 'overlay',
+    zoom && 'zoom',
+    waves && 'Ripple-parent',
+    className
+  );
 
-  const { cascade, className, hover, overlay, src, tag, top, waves, zoom, ...attributes } = props;
+  const innerContent = overlay ? <div className={`mask ${overlay}`}>{children}</div> : children;
 
-  const classes = classNames(top && 'card-img-top', className);
-
-  const Tag = tag;
-
-  const innerContent = <Tag data-test='card-image' src={src} {...attributes} className={classes} />;
-
-  if (src) {
-    return (
-      <View zoom={zoom} hover={hover} cascade={cascade}>
-        <div className='Ripple-parent' onMouseDown={handleClick} style={{ touchAction: 'unset' }}>
-          {innerContent}
-          <Mask overlay={overlay} />
-          {waves && <Waves cursorPos={cursorPos} />}
-        </div>
-      </View>
-    );
-  }
-  return <div>{innerContent}</div>;
+  return (
+    <Tag {...attributes} className={classes} src={src}>
+      {innerContent}
+    </Tag>
+  );
 };
 
 CardImage.propTypes = {
@@ -52,15 +47,6 @@ CardImage.propTypes = {
   top: PropTypes.bool,
   waves: PropTypes.bool,
   zoom: PropTypes.bool
-};
-
-CardImage.defaultProps = {
-  tag: 'img',
-  overlay: 'white-slight',
-  waves: true,
-  hover: false,
-  cascade: false,
-  zoom: false
 };
 
 export default CardImage;

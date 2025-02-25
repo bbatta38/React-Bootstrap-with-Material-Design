@@ -1,10 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import { Fa, MDBBtn, MDBPopoverBody, MDBPopoverHeader, MDBTooltip } from 'louis-mdbreact';
+import { Fa, MDBBtn, MDBPopoverBody, MDBPopoverHeader, MDBTooltip } from 'mdbreact';
 import PropTypes from 'prop-types';
 
 const Rating = props => {
-  const [data, setData] = useState([]);
+  const {
+    tag: Tag = 'div',
+    containerClassName = '',
+    iconClassName = '',
+    iconFaces = false,
+    iconSize = '1x',
+    iconRegular = false,
+    fillClassName = 'fiveStars',
+    fillColors = false,
+    getValue,
+    feedback = false,
+    submitHandler = e => e.preventDefault(),
+    data: PropsData = [
+      {
+        tooltip: 'Very Bad'
+      },
+      {
+        tooltip: 'Poor'
+      },
+      {
+        tooltip: 'Ok'
+      },
+      {
+        tooltip: 'Good'
+      },
+      {
+        tooltip: 'Excellent'
+      }
+    ],
+    ...commonAttributes
+  } = props;
+
+  const [data, setData] = useState(PropsData);
   const [hovered, setHovered] = useState(null);
   const [choosed, setChoosed] = useState({
     title: '',
@@ -25,9 +57,9 @@ const Rating = props => {
   }, []);
 
   useEffect(() => {
-    setData(props.data);
+    setData(PropsData);
     // eslint-disable-next-line react/destructuring-assignment
-  }, [props.data]);
+  }, [PropsData]);
 
   useEffect(() => {
     const choosedIndex = data.findIndex(item => item.choosed);
@@ -38,13 +70,13 @@ const Rating = props => {
   }, [data]);
 
   useEffect(() => {
-    if (props.getValue) {
+    if (getValue) {
       let { title, index } = choosed;
       index = index !== null ? index + 1 : index;
 
-      props.getValue({ title, value: index });
+      getValue({ title, value: index });
     }
-  }, [choosed, props]);
+  }, [choosed, getValue]);
 
   const handleMouseEnter = (_, index) => {
     setHovered(index);
@@ -76,21 +108,6 @@ const Rating = props => {
   const feedbackValueHandler = e => {
     setFeedbackValue(e.target.value);
   };
-
-  const {
-    tag: Tag,
-    containerClassName,
-    iconClassName,
-    iconFaces,
-    iconSize,
-    iconRegular,
-    fillClassName,
-    fillColors,
-    getValue,
-    feedback,
-    submitHandler,
-    ...commonAttributes
-  } = props;
 
   const containerClasses = classNames(
     'mdb-rating',
@@ -264,34 +281,6 @@ Rating.propTypes = {
   iconSize: PropTypes.string,
   submitHandler: PropTypes.func,
   tag: PropTypes.string
-};
-
-Rating.defaultProps = {
-  containerClassName: '',
-  data: [
-    {
-      tooltip: 'Very Bad'
-    },
-    {
-      tooltip: 'Poor'
-    },
-    {
-      tooltip: 'Ok'
-    },
-    {
-      tooltip: 'Good'
-    },
-    {
-      tooltip: 'Excellent'
-    }
-  ],
-  feedback: false,
-  fillClassName: 'fiveStars',
-  iconClassName: '',
-  iconSize: '1x',
-  iconRegular: false,
-  tag: 'div',
-  submitHandler: e => e.preventDefault()
 };
 
 export default Rating;

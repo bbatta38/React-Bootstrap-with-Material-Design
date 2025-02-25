@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Pagination = props => {
-  const { children, circle, className, color, tag: Tag, size, ...attributes } = props;
+  const { children, circle = false, className = '', color = '', tag: Tag = 'ul', size, ...attributes } = props;
 
   const classes = classNames(
     {
@@ -29,13 +29,6 @@ Pagination.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOf(['lg', 'sm']),
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-Pagination.defaultProps = {
-  circle: false,
-  className: '',
-  color: '',
-  tag: 'ul'
 };
 
 export default Pagination;

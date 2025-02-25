@@ -7,7 +7,7 @@ const DataTableInfo = props => {
     entries,
     filteredRows,
     info,
-    label,
+    label = ['Showing', 'to', 'of', 'entries'],
     noRecordsFoundLabel,
     pages
   } = props;
@@ -17,13 +17,10 @@ const DataTableInfo = props => {
   const OF_LABEL = label[2];
   const ENTRIES_LABEL = label[3];
 
-  const NO_RECORDS =
-    filteredRows.length > 0 && filteredRows[0].message === noRecordsFoundLabel;
+  const NO_RECORDS = filteredRows.length > 0 && filteredRows[0].message === noRecordsFoundLabel;
   const RECORDS = activePage > 0 ? activePage * entries + 1 : activePage + 1;
   const RECORDS_ON_PAGE =
-    pages.length - 1 > activePage
-      ? pages[activePage].length * (activePage + 1)
-      : filteredRows.length;
+    pages.length - 1 > activePage ? pages[activePage].length * (activePage + 1) : filteredRows.length;
   const ENTRIES = filteredRows.length;
 
   return (
@@ -47,10 +44,6 @@ DataTableInfo.propTypes = {
   noRecordsFoundLabel: PropTypes.string.isRequired,
   pages: PropTypes.array.isRequired,
   label: PropTypes.arrayOf(PropTypes.string)
-};
-
-DataTableInfo.defaultProps = {
-  label: ['Showing', 'to', 'of', 'entries']
 };
 
 export default DataTableInfo;

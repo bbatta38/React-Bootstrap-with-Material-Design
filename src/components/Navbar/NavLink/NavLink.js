@@ -8,7 +8,7 @@ import { MDBLink } from '../../Link';
 const NavLink = props => {
   const cursorPos = {};
   // const [cursorPos, setCursorPos] = useState({});
-  const { children, className, disabled, active, to, link, ...attributes } = props;
+  const { children, className = '', disabled = false, active = false, to, link = false, ...attributes } = props;
   const classes = classNames('nav-link', disabled ? 'disabled' : 'Ripple-parent', active && 'active', className);
 
   const handleClick = e => {
@@ -48,13 +48,6 @@ NavLink.propTypes = {
   disabled: PropTypes.bool,
   link: PropTypes.bool,
   to: PropTypes.string
-};
-
-NavLink.defaultProps = {
-  active: false,
-  className: '',
-  disabled: false,
-  link: false
 };
 
 export default NavLink;

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { MDBBox } from 'louis-mdbreact';
+import { MDBBox } from 'mdbreact';
 import './GalleryList.css';
 import { debounce } from '../../utils';
 
@@ -32,7 +32,7 @@ function ensureImageCover(img) {
 }
 
 const GalleryList = React.forwardRef(function GalleryList(props, ref) {
-  const { children, className, cols, tag, rows, titleClasses, elementClasses, styles, ...attributes } = props;
+  const { children, className, cols, tag = 'li', rows, titleClasses, elementClasses, styles, ...attributes } = props;
 
   const imgRef = useRef(null);
   const ec = classNames('mdb-gallery-element', elementClasses);
@@ -82,10 +82,6 @@ GalleryList.propTypes = {
   style: PropTypes.object,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   titleClasses: PropTypes.string
-};
-
-GalleryList.defaultProps = {
-  tag: 'li'
 };
 
 export default GalleryList;

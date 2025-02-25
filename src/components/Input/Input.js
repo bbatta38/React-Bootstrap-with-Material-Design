@@ -12,6 +12,41 @@ class Input extends React.Component {
 
   inputElementRef = React.createRef();
 
+  static defaultProps = {
+    className: '',
+    containerClass: '',
+    dataTest: 'input',
+    disabled: false,
+    error: '',
+    filled: false,
+    gap: false,
+    group: false,
+    hint: undefined,
+    icon: '',
+    iconBrand: false,
+    focused: false,
+    indeterminate: false,
+    iconClass: '',
+    iconLight: false,
+    onIconMouseEnter: () => {},
+    onIconMouseLeave: () => {},
+    iconRegular: false,
+    iconSize: undefined,
+    id: undefined,
+    isControlled: false,
+    noTag: false,
+    outline: false,
+    label: ' ',
+    labelClass: '',
+    labelId: '',
+    size: '',
+    success: '',
+    tag: 'div',
+    type: 'text',
+    validate: false,
+    valueDefault: ''
+  };
+
   componentDidMount() {
     // User wants to access the input ref, but we have to use it intenrally to.
     // Return Ref instance to share ref with parent
@@ -279,41 +314,6 @@ Input.propTypes = {
   validate: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool]),
   valueDefault: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-};
-
-Input.defaultProps = {
-  className: '',
-  containerClass: '',
-  dataTest: 'input',
-  disabled: false,
-  error: '',
-  filled: false,
-  gap: false,
-  group: false,
-  hint: undefined,
-  icon: '',
-  iconBrand: false,
-  focused: false,
-  indeterminate: false,
-  iconClass: '',
-  iconLight: false,
-  onIconMouseEnter: () => {},
-  onIconMouseLeave: () => {},
-  iconRegular: false,
-  iconSize: undefined,
-  id: undefined,
-  isControlled: false,
-  noTag: false,
-  outline: false,
-  label: ' ',
-  labelClass: '',
-  labelId: '',
-  size: '',
-  success: '',
-  tag: 'div',
-  type: 'text',
-  validate: false,
-  valueDefault: ''
 };
 
 export default Input;

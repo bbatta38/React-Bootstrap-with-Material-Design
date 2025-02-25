@@ -23,6 +23,10 @@ class CarouselItem extends Component {
     };
   };
 
+  static defaultProps = {
+    tag: 'div'
+  };
+
   render() {
     let { active, children, className, itemId, tag: Tag, ...attributes } = this.props;
 
@@ -67,10 +71,6 @@ CarouselItem.propTypes = {
   className: PropTypes.string,
   itemId: PropTypes.any,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-CarouselItem.defaultProps = {
-  tag: 'div'
 };
 
 CarouselItem.contextTypes = {

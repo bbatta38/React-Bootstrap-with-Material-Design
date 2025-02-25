@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const PageLink = props => {
-  const { children, className, tag: Tag, ...attributes } = props;
+  const { children, className, tag: Tag = 'a', ...attributes } = props;
 
   const classes = classNames('page-link', className);
 
@@ -18,10 +18,6 @@ PageLink.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-PageLink.defaultProps = {
-  tag: 'a'
 };
 
 export default PageLink;

@@ -7,7 +7,7 @@ import Waves from '../Waves';
 const Link = props => {
   const cursorPos = {};
   // const [cursorPos, setCursorPos] = useState({});
-  const { active, children, className, disabled, link, to, ...attributes } = props;
+  const { active = false, children, className = '', disabled = false, link, to, ...attributes } = props;
   const classes = classNames('nav-link', disabled ? 'disabled' : 'Ripple-parent', active && 'active', className);
 
   const handleClick = e => {
@@ -43,12 +43,6 @@ Link.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   to: PropTypes.string
-};
-
-Link.defaultProps = {
-  active: false,
-  className: '',
-  disabled: false
 };
 
 export default Link;

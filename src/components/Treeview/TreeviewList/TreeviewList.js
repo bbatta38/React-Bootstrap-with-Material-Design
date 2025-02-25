@@ -16,18 +16,17 @@ const TreeviewList = props => {
   }, [props, props.opened]);
 
   const handleSwitch = () => setOpen(!opened);
-
   const {
     children,
     className,
-    disabled,
+    disabled = false,
     disabledClassName,
-    fab,
-    fal,
-    far,
-    icon,
-    opened: _,
-    tag: Tag,
+    fab = false,
+    fal = false,
+    far = false,
+    icon = 'folder-open',
+    opened: _ = false,
+    tag: Tag = 'li',
     title,
     ...attributes
   } = props;
@@ -93,16 +92,6 @@ TreeviewList.propTypes = {
   opened: PropTypes.bool,
   tag: PropTypes.string,
   title: PropTypes.any
-};
-
-TreeviewList.defaultProps = {
-  disabled: false,
-  fab: false,
-  fal: false,
-  far: false,
-  icon: 'folder-open',
-  opened: false,
-  tag: 'li'
 };
 
 TreeviewList.contextTypes = {

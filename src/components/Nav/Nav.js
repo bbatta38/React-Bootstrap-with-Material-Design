@@ -3,7 +3,17 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Nav = props => {
-  const { children, className, tag: Tag, tabs, color, classicTabs, pills, header, ...attributes } = props;
+  const {
+    children,
+    className,
+    tag: Tag = 'ul',
+    tabs = false,
+    color,
+    classicTabs = false,
+    pills = false,
+    header = false,
+    ...attributes
+  } = props;
 
   const classes = classNames(
     'nav',
@@ -32,14 +42,6 @@ Nav.propTypes = {
   pills: PropTypes.bool,
   tabs: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-Nav.defaultProps = {
-  tag: 'ul',
-  classicTabs: false,
-  pills: false,
-  tabs: false,
-  header: false
 };
 
 export default Nav;

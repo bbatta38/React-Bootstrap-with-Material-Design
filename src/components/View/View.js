@@ -15,8 +15,19 @@ const View = props => {
     // };
     // setCursorPos(cursorPos);
   };
-
-  const { cascade, children, className, fixed, hover, rounded, src, tag: Tag, waves, zoom, ...attributes } = props;
+  const {
+    cascade = false,
+    children,
+    className = '',
+    fixed,
+    hover = false,
+    rounded = false,
+    src = '',
+    tag: Tag = 'div',
+    waves = false,
+    zoom = false,
+    ...attributes
+  } = props;
 
   const classes = classNames(
     'view',
@@ -52,17 +63,6 @@ const View = props => {
       {waves && <Waves cursorPos={cursorPos} />}
     </Tag>
   );
-};
-
-View.defaultProps = {
-  cascade: false,
-  className: '',
-  hover: false,
-  rounded: false,
-  src: '',
-  tag: 'div',
-  waves: false,
-  zoom: false
 };
 
 View.propTypes = {

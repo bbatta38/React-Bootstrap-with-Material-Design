@@ -25,7 +25,7 @@ const Button = props => {
     children,
     circle,
     className,
-    color,
+    color = 'default',
     disabled,
     download,
     flat,
@@ -36,7 +36,7 @@ const Button = props => {
     rounded,
     size,
     social,
-    tag: Tag,
+    tag: Tag = 'button',
     target,
     type,
     ...attributes
@@ -82,11 +82,6 @@ const Button = props => {
       {!disabled && <Waves cursorPos={cursorPos} outline={outline} flat={flat || rounded} />}
     </Tag>
   );
-};
-
-Button.defaultProps = {
-  color: 'default',
-  tag: 'button'
 };
 
 Button.propTypes = {

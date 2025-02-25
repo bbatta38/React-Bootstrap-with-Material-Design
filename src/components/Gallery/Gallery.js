@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { MDBBox } from 'louis-mdbreact';
+import { MDBBox } from 'mdbreact';
 import './Gallery.css';
 
 const Gallery = React.forwardRef(function Gallery(props, ref) {
-  const { cellHeight = 180, children, className, cols = 2, tag, spacing = 4, style, ...attributes } = props;
+  const { cellHeight = 180, children, className, cols = 2, tag = 'ul', spacing = 4, style, ...attributes } = props;
 
   const classes = classNames('mdb-gallery', className);
 
@@ -39,10 +39,6 @@ Gallery.propTypes = {
   spacing: PropTypes.number,
   style: PropTypes.object,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-Gallery.defaultProps = {
-  tag: 'ul'
 };
 
 export default Gallery;

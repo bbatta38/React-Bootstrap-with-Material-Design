@@ -27,6 +27,12 @@ class Navbar extends Component {
     }
   };
 
+  static defaultProps = {
+    tag: 'nav',
+    expand: false,
+    scrolling: false
+  };
+
   componentDidMount() {
     const { scrolling, scrollingNavbarOffset } = this.props;
     if (scrolling || scrollingNavbarOffset) {
@@ -94,12 +100,6 @@ Navbar.propTypes = {
   sticky: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   transparent: PropTypes.bool
-};
-
-Navbar.defaultProps = {
-  tag: 'nav',
-  expand: false,
-  scrolling: false
 };
 
 export default Navbar;

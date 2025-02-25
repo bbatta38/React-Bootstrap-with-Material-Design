@@ -14,7 +14,7 @@ const ListGroupItem = props => {
     info,
     warning,
     danger,
-    tag: Tag,
+    tag: Tag = 'li',
     ...attributes
   } = props;
 
@@ -48,10 +48,6 @@ ListGroupItem.propTypes = {
   success: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   warning: PropTypes.bool
-};
-
-ListGroupItem.defaultProps = {
-  tag: 'li'
 };
 
 export default ListGroupItem;

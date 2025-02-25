@@ -21,6 +21,13 @@ class Collapse extends Component {
 
   element = null;
 
+  static defaultProps = {
+    isOpen: '',
+    delay: DEFAULT_DELAYS,
+    onOpened: () => {},
+    onClosed: () => {}
+  };
+
   componentDidMount() {
     const { isOpen } = this.props;
     const { collapse, id } = this.state;
@@ -151,11 +158,5 @@ Collapse.propTypes = {
   onOpened: PropTypes.func
 };
 
-Collapse.defaultProps = {
-  isOpen: '',
-  delay: DEFAULT_DELAYS,
-  onOpened: () => {},
-  onClosed: () => {}
-};
 export default Collapse;
 export { Collapse as MDBCollapse };

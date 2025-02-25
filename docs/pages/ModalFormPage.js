@@ -8,7 +8,7 @@ import {
   MDBModalFooter,
   MDBInput,
   MDBIcon
-} from 'louis-mdbreact';
+} from 'mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 

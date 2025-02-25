@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const Card = props => {
   const {
     className,
-    tag: Tag,
+    tag: Tag = 'div',
     cascade,
     wide,
     narrow,
@@ -61,10 +61,6 @@ Card.propTypes = {
   testimonial: PropTypes.bool,
   text: PropTypes.string,
   wide: PropTypes.bool
-};
-
-Card.defaultProps = {
-  tag: 'div'
 };
 
 export default Card;

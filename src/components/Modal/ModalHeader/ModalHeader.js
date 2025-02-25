@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const ModalHeader = props => {
   let closeButton;
-  const { className, children, toggle, tag: Tag, closeAriaLabel, titleClass, ...attributes } = props;
+  const { className, children, toggle, tag: Tag = 'h4', closeAriaLabel = 'Close', titleClass, ...attributes } = props;
 
   const classes = classNames('modal-header', className);
 
@@ -32,11 +32,6 @@ ModalHeader.propTypes = {
   closeAriaLabel: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   toggle: PropTypes.func
-};
-
-ModalHeader.defaultProps = {
-  tag: 'h4',
-  closeAriaLabel: 'Close'
 };
 
 export default ModalHeader;

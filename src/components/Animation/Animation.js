@@ -11,6 +11,13 @@ class Animation extends Component {
 
   elemRef = React.createRef();
 
+  static defaultProps = {
+    tag: 'div',
+    reveal: false,
+    duration: 1,
+    count: 1
+  };
+
   componentDidMount() {
     const { reveal } = this.props;
 
@@ -170,13 +177,6 @@ Animation.propTypes = {
   style: PropTypes.node,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   type: PropTypes.string
-};
-
-Animation.defaultProps = {
-  tag: 'div',
-  reveal: false,
-  duration: 1,
-  count: 1
 };
 
 export default Animation;

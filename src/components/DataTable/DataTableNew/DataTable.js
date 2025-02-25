@@ -7,7 +7,7 @@ import DataTableEntries from './DataTableEntries';
 import DataTableSearch from './DataTableSearch';
 import DataTableInfo from './DataTableInfo';
 import DataTablePagination from './DataTablePagination';
-import { MDBSelect, MDBInput } from 'louis-mdbreact';
+import { MDBSelect, MDBInput } from 'mdbreact';
 
 import './scss/_datatables2.scss';
 import './scss/_datatables-select2.scss';
@@ -29,6 +29,59 @@ class DataTable extends Component {
     unsearchable: [],
     headCheckBox: false,
     disableHeadCheckbox: false
+  };
+
+  static defaultProps = {
+    autoWidth: false,
+    barReverse: false,
+    bordered: false,
+    borderless: true,
+    btn: false,
+    dark: false,
+    data: {
+      columns: [],
+      rows: []
+    },
+    disableRetreatAfterSorting: false,
+    displayEntries: true,
+    entries: 10,
+    entriesLabel: 'Rows per page:',
+    entriesOptions: [10, 20, 50, 100],
+    exportToCSV: false,
+    filledCheckboxes: false,
+    fixed: false,
+    hover: false,
+    info: true,
+    infoLabel: ['', '-', 'of', ''],
+    noBottomColumns: true,
+    noRecordsFoundLabel: 'No matching records found',
+    order: [],
+    pagesAmount: 8,
+    paginationLabel: ['Prev', 'Next'],
+    paging: true,
+    responsive: false,
+    responsiveLg: false,
+    responsiveMd: false,
+    responsiveSm: false,
+    responsiveXl: false,
+    scrollX: false,
+    scrollY: false,
+    searchBottom: true,
+    searching: true,
+    searchLabel: 'Search',
+    searchTop: false,
+    small: false,
+    sortable: true,
+    striped: false,
+    theadColor: '',
+    theadTextWhite: false,
+    tbodyColor: '',
+    tbodyTextWhite: false,
+    headCheckboxID: 'checkbox-id',
+    proCheckboxes: false,
+    fullPagination: false,
+    proSelect: false,
+    materialSearch: false
   };
 
   handleCheckBoxChange = (selectRow, i) => {
@@ -835,59 +888,6 @@ DataTable.propTypes = {
   tbodyTextWhite: PropTypes.bool,
   theadColor: PropTypes.string,
   theadTextWhite: PropTypes.bool
-};
-
-DataTable.defaultProps = {
-  autoWidth: false,
-  barReverse: false,
-  bordered: false,
-  borderless: true,
-  btn: false,
-  dark: false,
-  data: {
-    columns: [],
-    rows: []
-  },
-  disableRetreatAfterSorting: false,
-  displayEntries: true,
-  entries: 10,
-  entriesLabel: 'Rows per page:',
-  entriesOptions: [10, 20, 50, 100],
-  exportToCSV: false,
-  filledCheckboxes: false,
-  fixed: false,
-  hover: false,
-  info: true,
-  infoLabel: ['', '-', 'of', ''],
-  noBottomColumns: true,
-  noRecordsFoundLabel: 'No matching records found',
-  order: [],
-  pagesAmount: 8,
-  paginationLabel: ['Prev', 'Next'],
-  paging: true,
-  responsive: false,
-  responsiveLg: false,
-  responsiveMd: false,
-  responsiveSm: false,
-  responsiveXl: false,
-  scrollX: false,
-  scrollY: false,
-  searchBottom: true,
-  searching: true,
-  searchLabel: 'Search',
-  searchTop: false,
-  small: false,
-  sortable: true,
-  striped: false,
-  theadColor: '',
-  theadTextWhite: false,
-  tbodyColor: '',
-  tbodyTextWhite: false,
-  headCheckboxID: 'checkbox-id',
-  proCheckboxes: false,
-  fullPagination: false,
-  proSelect: false,
-  materialSearch: false
 };
 
 export default DataTable;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const CardHeader = props => {
-  const { border, className, color, tag: Tag, text, transparent, ...attributes } = props;
+  const { border, className, color, tag: Tag = 'div', text, transparent, ...attributes } = props;
 
   const classes = classNames(
     {
@@ -27,10 +27,6 @@ CardHeader.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   text: PropTypes.string,
   transparent: PropTypes.bool
-};
-
-CardHeader.defaultProps = {
-  tag: 'div'
 };
 
 export default CardHeader;

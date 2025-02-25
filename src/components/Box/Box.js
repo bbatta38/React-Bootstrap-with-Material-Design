@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const Box = props => {
   const {
-    tag: Tag,
+    tag: Tag = 'div',
     className,
     children,
     display,
@@ -97,10 +97,6 @@ Box.propTypes = {
   px: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   py: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   tag: PropTypes.string
-};
-
-Box.defaultProps = {
-  tag: 'div'
 };
 
 export default Box;

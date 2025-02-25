@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBRow, MDBIcon } from 'louis-mdbreact';
+import { MDBRow, MDBIcon } from 'mdbreact';
 
 const DocsLink = ({ title, href }) => {
   return (

@@ -13,6 +13,17 @@ class Popover extends React.Component {
   popoverWrapperRef = React.createRef();
   referenceElm = React.createRef();
 
+  static defaultProps = {
+    clickable: false,
+    domElement: false,
+    id: 'popper',
+    isVisible: false,
+    placement: 'top',
+    popover: false,
+    style: { display: 'inline-block' },
+    tag: 'div'
+  };
+
   componentDidUpdate(prevProps, prevState) {
     const { showPopper } = this.state;
     const { isVisible, onChange } = this.props;
@@ -193,16 +204,7 @@ Popover.propTypes = {
   style: PropTypes.objectOf(PropTypes.string),
   tag: PropTypes.string
 };
-Popover.defaultProps = {
-  clickable: false,
-  domElement: false,
-  id: 'popper',
-  isVisible: false,
-  placement: 'top',
-  popover: false,
-  style: { display: 'inline-block' },
-  tag: 'div'
-};
+
 export default Popover;
 export { Popover as MDBPopper };
 export { Popover as MDBTooltip };

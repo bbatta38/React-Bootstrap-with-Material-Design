@@ -25,6 +25,55 @@ class DataTable extends Component {
     unsearchable: []
   };
 
+  static defaultProps = {
+    autoWidth: false,
+    barReverse: false,
+    bordered: false,
+    borderless: false,
+    btn: false,
+    dark: false,
+    data: {
+      columns: [],
+      rows: []
+    },
+    disableRetreatAfterSorting: false,
+    displayEntries: true,
+    entries: 10,
+    entriesLabel: 'Show entries',
+    entriesOptions: [10, 20, 50, 100],
+    exportToCSV: false,
+    fixed: false,
+    hover: false,
+    info: true,
+    infoLabel: ['Showing', 'to', 'of', 'entries'],
+    initialPage: 0,
+    noRecordsFoundLabel: 'No matching records found',
+    noBottomColumns: false,
+    order: [],
+    pagesAmount: 8,
+    paging: true,
+    paginationLabel: ['Previous', 'Next'],
+    responsive: false,
+    responsiveSm: false,
+    responsiveMd: false,
+    responsiveLg: false,
+    responsiveXl: false,
+    searching: true,
+    searchLabel: 'Search',
+    searchText: '',
+    scrollX: false,
+    scrollY: false,
+    sortable: true,
+    small: false,
+    striped: false,
+    theadColor: '',
+    theadTextWhite: false,
+    tbodyColor: '',
+    tbodyTextWhite: false,
+    proSelect: false,
+    materialSearch: false
+  };
+
   componentDidMount() {
     const { data, paging } = this.props;
     const { order, columns, pages, rows } = this.state;
@@ -524,55 +573,6 @@ DataTable.propTypes = {
   tbodyTextWhite: PropTypes.bool,
   theadColor: PropTypes.string,
   theadTextWhite: PropTypes.bool
-};
-
-DataTable.defaultProps = {
-  autoWidth: false,
-  barReverse: false,
-  bordered: false,
-  borderless: false,
-  btn: false,
-  dark: false,
-  data: {
-    columns: [],
-    rows: []
-  },
-  disableRetreatAfterSorting: false,
-  displayEntries: true,
-  entries: 10,
-  entriesLabel: 'Show entries',
-  entriesOptions: [10, 20, 50, 100],
-  exportToCSV: false,
-  fixed: false,
-  hover: false,
-  info: true,
-  infoLabel: ['Showing', 'to', 'of', 'entries'],
-  initialPage: 0,
-  noRecordsFoundLabel: 'No matching records found',
-  noBottomColumns: false,
-  order: [],
-  pagesAmount: 8,
-  paging: true,
-  paginationLabel: ['Previous', 'Next'],
-  responsive: false,
-  responsiveSm: false,
-  responsiveMd: false,
-  responsiveLg: false,
-  responsiveXl: false,
-  searching: true,
-  searchLabel: 'Search',
-  searchText: '',
-  scrollX: false,
-  scrollY: false,
-  sortable: true,
-  small: false,
-  striped: false,
-  theadColor: '',
-  theadTextWhite: false,
-  tbodyColor: '',
-  tbodyTextWhite: false,
-  proSelect: false,
-  materialSearch: false
 };
 
 export default DataTable;

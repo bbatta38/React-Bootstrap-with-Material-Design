@@ -6,17 +6,17 @@ import './Breadcrumb.css';
 
 const BreadcrumbItem = props => {
   const {
-    active,
-    appendIcon,
+    active = false,
+    appendIcon = false,
     children,
-    className,
-    bold,
-    icon,
-    iconBrand,
-    iconClassName,
-    iconLight,
-    iconRegular,
-    iconSize,
+    className = '',
+    bold = false,
+    icon = '',
+    iconBrand = false,
+    iconClassName = '',
+    iconLight = false,
+    iconRegular = false,
+    iconSize = '',
     ...attributes
   } = props;
 
@@ -67,19 +67,6 @@ BreadcrumbItem.propTypes = {
   iconLight: PropTypes.bool,
   iconRegular: PropTypes.bool,
   iconSize: PropTypes.string
-};
-
-BreadcrumbItem.defaultProps = {
-  active: false,
-  appendIcon: false,
-  className: '',
-  bold: false,
-  icon: '',
-  iconBrand: false,
-  iconClassName: '',
-  iconLight: false,
-  iconRegular: false,
-  iconSize: ''
 };
 
 export default BreadcrumbItem;

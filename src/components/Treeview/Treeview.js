@@ -5,23 +5,31 @@ import classNames from 'classnames';
 export const TreeviewContext = React.createContext();
 
 const Treeview = props => {
+  const {
+    theme = '',
+    children,
+    className,
+    getValue = () => {},
+    header,
+    listClassName,
+    tag: Tag = 'div',
+    ...attributes
+  } = props;
   const [active, setActive] = useState(null);
 
   useEffect(() => {
-    if (props.getValue) {
-      props.getValue({
+    if (getValue) {
+      getValue({
         item: active ? active.closest('li') : active,
         value: active ? active.closest('li').childNodes[1].textContent : active
       });
     }
-  }, [active, props]);
+  }, [active, getValue]);
 
   const getActive = target => {
     setActive(target);
     return target;
   };
-
-  const { theme, children, className, getValue, header, listClassName, tag: Tag, ...attributes } = props;
 
   const classes = classNames('border', theme ? `treeview-${theme}` : 'treeview', className);
   const ulClasses = classNames(
@@ -64,12 +72,6 @@ Treeview.propTypes = {
   listClassName: PropTypes.string,
   tag: PropTypes.string,
   theme: PropTypes.string
-};
-
-Treeview.defaultProps = {
-  tag: 'div',
-  theme: '',
-  getValue: () => {}
 };
 
 export default Treeview;

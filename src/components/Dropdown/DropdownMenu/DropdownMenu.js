@@ -6,6 +6,15 @@ import DropdownMenuComponent from '../DropdownMenuComponent';
 import './DropdownMenu.css';
 
 class DropdownMenu extends Component {
+  static defaultProps = {
+    basic: false,
+    className: '',
+    flip: true,
+    right: false,
+    tag: 'div',
+    color: false
+  };
+
   render() {
     const { basic, children, className, color, flip, modifiers, right, tag, ...attrs } = this.props;
 
@@ -70,15 +79,6 @@ DropdownMenu.propTypes = {
   modifiers: PropTypes.object,
   right: PropTypes.bool,
   tag: PropTypes.string
-};
-
-DropdownMenu.defaultProps = {
-  basic: false,
-  className: '',
-  flip: true,
-  right: false,
-  tag: 'div',
-  color: false
 };
 
 DropdownMenu.contextTypes = {

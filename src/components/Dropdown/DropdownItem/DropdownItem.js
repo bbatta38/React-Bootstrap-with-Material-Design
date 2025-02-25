@@ -4,6 +4,11 @@ import classNames from 'classnames';
 import { omit } from '../../utils';
 
 class DropdownItem extends Component {
+  static defaultProps = {
+    tag: 'button',
+    toggle: true
+  };
+
   onClick = e => {
     const { disabled, header, divider, onClick, toggle } = this.props;
 
@@ -84,11 +89,6 @@ DropdownItem.propTypes = {
   onClick: PropTypes.func,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   toggle: PropTypes.bool
-};
-
-DropdownItem.defaultProps = {
-  tag: 'button',
-  toggle: true
 };
 
 DropdownItem.contextTypes = {

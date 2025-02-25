@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const NavbarToggler = props => {
-  const { right, left, children, className, tag: Tag, image, ...attributes } = props;
+  const { right, left, children, className, tag: Tag = 'button', image, type = 'button', ...attributes } = props;
 
   const classes = classNames(
     {
@@ -34,11 +34,6 @@ NavbarToggler.propTypes = {
   right: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   type: PropTypes.string
-};
-
-NavbarToggler.defaultProps = {
-  tag: 'button',
-  type: 'button'
 };
 
 export default NavbarToggler;

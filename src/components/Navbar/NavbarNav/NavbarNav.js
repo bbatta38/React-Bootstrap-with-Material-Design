@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const NavbarNav = props => {
-  const { children, className, right, left, tag: Tag, ...attributes } = props;
+  const { children, className, right, left, tag: Tag = 'ul', ...attributes } = props;
 
   const classes = classNames(
     'navbar-nav',
@@ -24,10 +24,6 @@ NavbarNav.propTypes = {
   left: PropTypes.bool,
   right: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-NavbarNav.defaultProps = {
-  tag: 'ul'
 };
 
 export default NavbarNav;

@@ -7,8 +7,19 @@ import { TreeviewContext } from '../Treeview';
 const TreeviewItem = props => {
   const [target, setTarget] = useState('');
   const targetRef = useRef(null);
-
-  const { className, disabled, disabledClassName, fab, fal, far, icon, opened, tag: Tag, title, ...attributes } = props;
+  const {
+    className,
+    disabled = false,
+    disabledClassName,
+    fab = false,
+    fal = false,
+    far = false,
+    icon = 'folder-open',
+    opened = false,
+    tag: Tag = 'li',
+    title,
+    ...attributes
+  } = props;
   const { active, getActive, theme } = useContext(TreeviewContext);
 
   useEffect(() => {
@@ -54,16 +65,6 @@ TreeviewItem.propTypes = {
   icon: PropTypes.string,
   opened: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-TreeviewItem.defaultProps = {
-  disabled: false,
-  fab: false,
-  fal: false,
-  far: false,
-  icon: 'folder-open',
-  opened: false,
-  tag: 'li'
 };
 
 export default TreeviewItem;

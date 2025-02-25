@@ -13,7 +13,7 @@ import {
   MDBTable,
   MDBTableBody,
   MDBTableHead
-} from 'louis-mdbreact';
+} from 'mdbreact';
 import './ModalExamplesPage.css';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';

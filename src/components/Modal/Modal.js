@@ -13,6 +13,24 @@ class Modal extends Component {
 
   modalContent = React.createRef();
 
+  static defaultProps = {
+    autoFocus: true,
+    backdrop: true,
+    backdropTransitionTimeout: 150,
+    disableBackdrop: false,
+    disableFocusTrap: true,
+    fade: true,
+    isOpen: false,
+    keyboard: true,
+    modalTransitionTimeout: 300,
+    overflowScroll: true,
+    position: '',
+    role: 'dialog',
+    tabIndex: '-1',
+    zIndex: 1050,
+    noClickableBodyWithoutBackdrop: false
+  };
+
   componentDidMount = () => {
     document.body.classList.add('modal-open');
   };
@@ -245,24 +263,6 @@ class Modal extends Component {
     );
   }
 }
-
-Modal.defaultProps = {
-  autoFocus: true,
-  backdrop: true,
-  backdropTransitionTimeout: 150,
-  disableBackdrop: false,
-  disableFocusTrap: true,
-  fade: true,
-  isOpen: false,
-  keyboard: true,
-  modalTransitionTimeout: 300,
-  overflowScroll: true,
-  position: '',
-  role: 'dialog',
-  tabIndex: '-1',
-  zIndex: 1050,
-  noClickableBodyWithoutBackdrop: false
-};
 
 Modal.propTypes = {
   animation: PropTypes.string,

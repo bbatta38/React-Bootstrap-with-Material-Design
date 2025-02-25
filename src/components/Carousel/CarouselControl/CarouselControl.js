@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Fa from '../../Fa';
 
 const Control = props => {
-  const { className, direction, iconLeft, iconRight, multiItem, onClick, tag: Tag, testimonial } = props;
+  const { className, direction, iconLeft, iconRight, multiItem, onClick, tag: Tag = 'a', testimonial } = props;
 
   let text;
 
@@ -53,10 +53,6 @@ Control.propTypes = {
   onClick: PropTypes.any,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   testimonial: PropTypes.bool
-};
-
-Control.defaultProps = {
-  tag: 'a'
 };
 
 export default Control;

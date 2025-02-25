@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const ButtonToolbar = ({ className, children, ...attributes }) => {
+const ButtonToolbar = ({ className, children, role = 'toolbar', ...attributes }) => {
   const classes = classNames(className, 'btn-toolbar');
 
   return (
@@ -17,10 +17,6 @@ ButtonToolbar.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   role: PropTypes.string
-};
-
-ButtonToolbar.defaultProps = {
-  role: 'toolbar'
 };
 
 export default ButtonToolbar;

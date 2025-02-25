@@ -2,7 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const DataTableInfo = props => {
-  const { activePage, entries, filteredRows, info, label, noRecordsFoundLabel, pages } = props;
+  const {
+    activePage,
+    entries,
+    filteredRows,
+    info,
+    label = ['Showing', 'to', 'of', 'entries'],
+    noRecordsFoundLabel,
+    pages
+  } = props;
 
   const SHOWING_LABEL = label[0];
   const TO_LABEL = label[1];
@@ -38,10 +46,6 @@ DataTableInfo.propTypes = {
   noRecordsFoundLabel: PropTypes.string.isRequired,
   pages: PropTypes.array.isRequired,
   label: PropTypes.arrayOf(PropTypes.string)
-};
-
-DataTableInfo.defaultProps = {
-  label: ['Showing', 'to', 'of', 'entries']
 };
 
 export default DataTableInfo;

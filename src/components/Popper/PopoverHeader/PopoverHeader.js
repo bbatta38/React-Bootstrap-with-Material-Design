@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const PopoverHeader = ({ attributes, children, className, tag: Tag }) => {
+const PopoverHeader = ({ attributes, children, className = '', tag: Tag = 'h3' }) => {
   const classes = classNames('popover-header', className);
 
   return (
@@ -16,11 +16,6 @@ PopoverHeader.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-PopoverHeader.defaultProps = {
-  className: '',
-  tag: 'h3'
 };
 
 export default PopoverHeader;

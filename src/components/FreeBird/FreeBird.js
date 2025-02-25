@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const FreeBird = props => {
-  const { className, tag: Tag, ...attributes } = props;
+  const { className, tag: Tag = 'div', ...attributes } = props;
 
   const classes = classNames('container free-bird', className);
 
@@ -13,10 +13,6 @@ const FreeBird = props => {
 FreeBird.propTypes = {
   className: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-FreeBird.defaultProps = {
-  tag: 'div'
 };
 
 export default FreeBird;

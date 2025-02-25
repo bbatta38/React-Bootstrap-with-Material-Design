@@ -13,7 +13,7 @@ import {
   MDBCardText,
   MDBAnimation,
   MDBNavLink
-} from 'louis-mdbreact';
+} from 'mdbreact';
 import './HomePage.css';
 
 class HomePage extends React.Component {

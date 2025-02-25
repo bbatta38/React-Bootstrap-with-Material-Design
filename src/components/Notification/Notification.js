@@ -9,6 +9,12 @@ class Notification extends React.Component {
     componentState: this.props.show ? 'show' : 'hide'
   };
 
+  static defaultProps = {
+    icon: 'square',
+    tag: 'div',
+    closeClassName: 'text-dark'
+  };
+
   componentDidMount() {
     const { autohide } = this.props;
     if (autohide > 0) {
@@ -87,12 +93,6 @@ Notification.propTypes = {
   title: PropTypes.string,
   titleClassName: PropTypes.string,
   titleColor: PropTypes.string
-};
-
-Notification.defaultProps = {
-  icon: 'square',
-  tag: 'div',
-  closeClassName: 'text-dark'
 };
 
 export default Notification;

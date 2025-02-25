@@ -3,7 +3,20 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Col = props => {
-  const { xs, sm, md, lg, xl, top, bottom, middle, size, className, tag: Tag, ...attributes } = props;
+  const {
+    xs = null,
+    sm = null,
+    md = null,
+    lg = null,
+    xl = null,
+    top,
+    bottom,
+    middle,
+    size,
+    className,
+    tag: Tag = 'div',
+    ...attributes
+  } = props;
 
   const classes = classNames(
     size && `col-${size}`,
@@ -34,15 +47,6 @@ Col.propTypes = {
   top: PropTypes.bool,
   xl: PropTypes.string,
   xs: PropTypes.string
-};
-
-Col.defaultProps = {
-  tag: 'div',
-  xs: null,
-  sm: null,
-  md: null,
-  lg: null,
-  xl: null
 };
 
 export default Col;

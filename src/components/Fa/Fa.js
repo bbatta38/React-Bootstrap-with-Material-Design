@@ -4,29 +4,29 @@ import classNames from 'classnames';
 
 const Fa = props => {
   const {
-    border,
-    brand,
-    className,
-    fab,
+    border = false,
+    brand = false,
+    className = '',
+    fab = false,
     duotone,
-    fal,
+    fal = false,
     fad,
-    far,
+    far = false,
     solid,
-    fixed,
+    fixed = false,
     fas,
-    flip,
+    flip = '',
     icon,
-    inverse,
-    light,
-    list,
-    pull,
-    pulse,
-    regular,
-    rotate,
-    size,
-    spin,
-    stack,
+    inverse = false,
+    light = false,
+    list = false,
+    pull = '',
+    pulse = false,
+    regular = false,
+    rotate = '',
+    size = '',
+    spin = false,
+    stack = '',
     ...attributes
   } = props;
 
@@ -83,27 +83,6 @@ Fa.propTypes = {
   size: PropTypes.string,
   spin: PropTypes.bool,
   stack: PropTypes.string
-};
-
-Fa.defaultProps = {
-  border: false,
-  brand: false,
-  className: '',
-  fab: false,
-  fal: false,
-  far: false,
-  fixed: false,
-  flip: '',
-  inverse: false,
-  light: false,
-  list: false,
-  pull: '',
-  pulse: false,
-  regular: false,
-  rotate: '',
-  size: '',
-  spin: false,
-  stack: ''
 };
 
 export default Fa;

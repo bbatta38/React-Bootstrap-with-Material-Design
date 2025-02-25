@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const TableBody = props => {
-  const { children, color, columns, rows, textWhite, ...attributes } = props;
+  const { children, color, columns, rows, textWhite = false, ...attributes } = props;
   const classes = classNames(color, {
     'text-white': textWhite
   });
@@ -65,10 +65,6 @@ TableBody.propTypes = {
   columns: PropTypes.array,
   rows: PropTypes.arrayOf(PropTypes.object),
   textWhite: PropTypes.bool
-};
-
-TableBody.defaultProps = {
-  textWhite: false
 };
 
 export default TableBody;

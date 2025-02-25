@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Progress = ({
-  animated,
-  barClassName,
+  animated = false,
+  barClassName = '',
   children,
-  className,
-  color,
-  height,
-  material,
-  max,
-  min,
-  preloader,
-  striped,
-  value,
-  wrapperStyle,
+  className = '',
+  color = 'indigo',
+  height = '',
+  material = false,
+  max = 100,
+  min = 0,
+  preloader = false,
+  striped = false,
+  value = 0,
+  wrapperStyle = {},
   ...attributes
 }) => {
   const percent = ((value - min) / (max - min)) * 100;
@@ -69,21 +69,6 @@ Progress.propTypes = {
   striped: PropTypes.bool,
   value: PropTypes.number,
   wrapperStyle: PropTypes.object
-};
-
-Progress.defaultProps = {
-  animated: false,
-  barClassName: '',
-  className: '',
-  color: 'indigo',
-  height: '',
-  material: false,
-  max: 100,
-  min: 0,
-  preloader: false,
-  striped: false,
-  value: 0,
-  wrapperStyle: {}
 };
 
 export default Progress;

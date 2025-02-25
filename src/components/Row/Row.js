@@ -3,7 +3,19 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Row = props => {
-  const { around, between, bottom, center, className, end, middle, start, tag: Tag, top, ...attributes } = props;
+  const {
+    around,
+    between,
+    bottom,
+    center,
+    className,
+    end,
+    middle,
+    start,
+    tag: Tag = 'div',
+    top,
+    ...attributes
+  } = props;
 
   const classes = classNames(
     'row',
@@ -32,10 +44,6 @@ Row.propTypes = {
   start: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   top: PropTypes.bool
-};
-
-Row.defaultProps = {
-  tag: 'div'
 };
 
 export default Row;

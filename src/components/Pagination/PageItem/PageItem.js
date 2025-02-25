@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const PageItem = props => {
-  const { active, className, children, disabled, tag: Tag, ...attributes } = props;
+  const { active = false, className = '', children, disabled = false, tag: Tag = 'li', ...attributes } = props;
 
   const classes = classNames(
     {
@@ -27,13 +27,6 @@ PageItem.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
-};
-
-PageItem.defaultProps = {
-  active: false,
-  className: '',
-  disabled: false,
-  tag: 'li'
 };
 
 export default PageItem;

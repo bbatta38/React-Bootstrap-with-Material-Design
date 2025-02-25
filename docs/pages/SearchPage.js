@@ -13,7 +13,7 @@ import {
   MDBBtn,
   MDBListGroup,
   MDBListGroupItem
-} from 'louis-mdbreact';
+} from 'mdbreact';
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 import './Search.css';

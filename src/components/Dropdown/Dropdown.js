@@ -22,6 +22,13 @@ class Dropdown extends Component {
     };
   }
 
+  static defaultProps = {
+    dropleft: false,
+    dropright: false,
+    dropup: false,
+    tag: 'div'
+  };
+
   componentDidMount() {
     this.handleEventsBinding();
   }
@@ -184,12 +191,7 @@ Dropdown.propTypes = {
   tag: PropTypes.string,
   toggle: PropTypes.func
 };
-Dropdown.defaultProps = {
-  dropleft: false,
-  dropright: false,
-  dropup: false,
-  tag: 'div'
-};
+
 Dropdown.childContextTypes = {
   dropleft: PropTypes.bool.isRequired,
   dropright: PropTypes.bool.isRequired,
