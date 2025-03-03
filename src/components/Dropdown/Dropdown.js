@@ -1,34 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, createContext } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { Manager } from 'react-popper';
 import classNames from 'classnames';
 import { omit, keyCodes } from '../utils';
 
+const DropdownContext = createContext();
 class Dropdown extends Component {
   state = {
     isOpen: false
   };
-
-  static childContextTypes = {
-    dropleft: PropTypes.bool.isRequired,
-    dropright: PropTypes.bool.isRequired,
-    dropup: PropTypes.bool.isRequired,
-    isOpen: PropTypes.bool.isRequired,
-    toggle: PropTypes.func.isRequired
-  };
-
-  getChildContext() {
-    const { isOpen } = this.state;
-    const { dropup, dropright, dropleft } = this.props;
-    return {
-      isOpen: isOpen,
-      dropup: dropup,
-      dropright: dropright,
-      dropleft: dropleft,
-      toggle: this.toggle
-    };
-  }
 
   static defaultProps = {
     dropleft: false,
@@ -177,12 +158,15 @@ class Dropdown extends Component {
       },
       className
     );
+
     return (
-      <Manager>
-        <div data-test='dropdown' className={classes} onKeyDown={this.handleKeyDown}>
-          {children}
-        </div>
-      </Manager>
+      <DropdownContext.Provider value={{ isOpen, dropup, dropright, dropleft, toggle: this.toggle }}>
+        <Manager>
+          <div data-test='dropdown' className={classes} onKeyDown={this.handleKeyDown}>
+            {children}
+          </div>
+        </Manager>
+      </DropdownContext.Provider>
     );
   }
 }
@@ -201,4 +185,4 @@ Dropdown.propTypes = {
 };
 
 export default Dropdown;
-export { Dropdown as MDBDropdown };
+export { Dropdown as MDBDropdown, DropdownContext };

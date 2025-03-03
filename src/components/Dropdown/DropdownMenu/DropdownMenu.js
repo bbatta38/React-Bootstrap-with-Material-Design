@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { Popper } from 'react-popper';
 import DropdownMenuComponent from '../DropdownMenuComponent';
 import './DropdownMenu.css';
+import { DropdownContext } from '../Dropdown';
 
 class DropdownMenu extends Component {
   static defaultProps = {
@@ -15,22 +16,12 @@ class DropdownMenu extends Component {
     color: false
   };
 
-  static contextTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    dropup: PropTypes.bool.isRequired,
-    dropright: PropTypes.bool.isRequired,
-    dropleft: PropTypes.bool.isRequired,
-    color: PropTypes.oneOfType([
-      PropTypes.oneOf(['primary', 'default', 'secondary', 'success', 'dark', 'danger', 'info', 'warning', 'ins']),
-      PropTypes.bool
-    ])
-  };
+  static contextType = DropdownContext;
 
   render() {
     const { basic, children, className, color, flip, modifiers, right, tag, ...attrs } = this.props;
 
     const { isOpen, dropup, dropright, dropleft } = this.context;
-
     const classes = classNames(
       {
         'dropdown-menu-right': right,

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { CarouselContext } from '../Carousel';
 
 class CarouselItem extends Component {
   moveForward = () => {
@@ -27,17 +28,11 @@ class CarouselItem extends Component {
     tag: 'div'
   };
 
-  static contextTypes = {
-    activeItem: PropTypes.any,
-    length: PropTypes.any,
-    slide: PropTypes.any
-  };
+  static contextType = CarouselContext;
 
   render() {
     let { active, children, className, itemId, tag: Tag, ...attributes } = this.props;
-
-    let { slide, activeItem } = this.context;
-
+    const { activeItem, slide } = this.context;
     itemId = parseInt(itemId, 10);
 
     const classes = classNames(

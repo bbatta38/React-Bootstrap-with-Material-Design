@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { TabContentContext } from '../TabContent';
 
 class TabPane extends React.Component {
-  static contextTypes = {
-    activeItemId: PropTypes.any
-  };
+  static contextType = TabContentContext;
 
   render() {
     const { className, tabId, ...attributes } = this.props;

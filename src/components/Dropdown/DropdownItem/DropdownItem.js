@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { omit } from '../../utils';
+import { DropdownContext } from '../Dropdown';
 
 class DropdownItem extends Component {
   static defaultProps = {
@@ -9,9 +10,7 @@ class DropdownItem extends Component {
     toggle: true
   };
 
-  static contextTypes = {
-    toggle: PropTypes.func
-  };
+  static contextType = DropdownContext;
 
   onClick = e => {
     const { disabled, header, divider, onClick, toggle } = this.props;

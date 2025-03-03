@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Reference } from 'react-popper';
 import Button from '../../Button';
+import { DropdownContext } from '../Dropdown';
 
 class DropdownToggle extends React.Component {
   static defaultProps = {
@@ -10,10 +11,7 @@ class DropdownToggle extends React.Component {
     color: 'secondary'
   };
 
-  static contextTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    toggle: PropTypes.func.isRequired
-  };
+  static contextType = DropdownContext;
 
   onClick = e => {
     const { disabled, nav, tag, onClick } = this.props;
